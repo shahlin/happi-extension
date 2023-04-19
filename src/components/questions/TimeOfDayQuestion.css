@@ -1,0 +1,27 @@
+.TimeOfDayQuestionContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.TimeOfDayQuestionContainer p {
+    margin-bottom: 0;
+}
+
+.TimeOfDayAnswerButtonGroup .MuiToggleButton-root {
+    border: none;
+    padding: 7px 9px;
+    margin-right: 10px;
+    border-radius: 30px !important;
+}
+
+.TimeOfDayAnswerButtonGroup .Mui-selected {
+    background-color: #f3f3f3 !important;
+}
+
+.TimeOfDayAnswerButton img,
+.TimeOfDayAnswerButton svg {
+    width: 30px;
+    padding: 0px;
+}

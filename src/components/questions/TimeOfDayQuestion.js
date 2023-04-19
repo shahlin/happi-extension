@@ -1,0 +1,68 @@
+import { useState } from 'react';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import Tooltip from '@mui/material/Tooltip';
+import './TimeOfDayQuestion.css'
+
+function TimeOfDayQuestion() {
+    const [answers, setAnswers] = useState(() => []);
+
+    const handleAnswer = (event, newAnswers) => {
+        if (newAnswers !== null) {
+            setAnswers(newAnswers);
+        }
+    };
+
+    return (
+        <div className='TimeOfDayQuestionContainer'>
+            <p>What time of the day were you most productive?</p>
+
+            <div className='TimeOfDayAnswersContainer'>
+                <ToggleButtonGroup
+                    className='TimeOfDayAnswerButtonGroup'
+                    value={answers}
+                    onChange={handleAnswer}
+                    aria-label='answers'
+                    exclusive
+                >
+                    <ToggleButton className='TimeOfDayAnswerButton' size='small' value='none' aria-label='none'>
+                        <Tooltip title='None' arrow>
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="35" height="35" rx="20" fill="#D3374E" />
+                            </svg>
+                        </Tooltip>
+                    </ToggleButton>
+                    <ToggleButton className='TimeOfDayAnswerButton' size='small' value='morning' aria-label='morning'>
+                        <Tooltip title='In the morning' arrow>
+                            <img src="/morning.png" />
+                        </Tooltip>
+                    </ToggleButton>
+                    <ToggleButton className='TimeOfDayAnswerButton' size='small' value='afternoon' aria-label='afternoon'>
+                        <Tooltip title='In the afternoon' arrow>
+                            <img src="/afternoon.png" />
+                        </Tooltip>
+                    </ToggleButton>
+                    <ToggleButton className='TimeOfDayAnswerButton' size='small' value='evening' aria-label='evening'>
+                        <Tooltip title='In the evening' arrow>
+                            <img src="/evening.png" />
+                        </Tooltip>
+                    </ToggleButton>
+                    <ToggleButton className='TimeOfDayAnswerButton' size='small' value='night' aria-label='night'>
+                        <Tooltip title='At night' arrow>
+                            <img src="/night.png" />
+                        </Tooltip>
+                    </ToggleButton>
+                    <ToggleButton className='TimeOfDayAnswerButton' size='small' value='equal' aria-label='equal'>
+                        <Tooltip title='Equally throughout the day' arrow>
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="35" height="35" rx="20" fill="#2EAF6E" />
+                            </svg>
+                        </Tooltip>
+                    </ToggleButton>
+                </ToggleButtonGroup>
+            </div>
+        </div >
+    )
+}
+
+export default TimeOfDayQuestion;

@@ -1,0 +1,30 @@
+.GenericQuestion {
+    margin-bottom: 15px;
+}
+
+.GenericAnswerButtonGroup {
+    float: right;
+    background-color: white;
+}
+
+.GenericAnswerButtonGroup .MuiToggleButton-sizeSmall {
+    height: 30px;
+}
+
+.GenericAnswerButtonGroup .MuiToggleButton-root {
+    background-color: white !important;
+    border: 2px solid #fafafa;
+    line-height: normal;
+}
+
+.GenericAnswerButtonGroup .Mui-selected {
+    background-color: #fafafa !important;
+}
+
+.GenericAnswerButtonText {
+    text-transform: capitalize;
+    font-family: 'Dongle';
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

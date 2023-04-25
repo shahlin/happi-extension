@@ -10,6 +10,11 @@
         "48": "logo/logo-small-48.png",
         "128": "logo/logo-small-128.png"
     },
+    "permissions": [
+        "identity",
+        "identity.email",
+        "storage"
+    ],
     "action": {
         "default_popup": "index.html"
     }

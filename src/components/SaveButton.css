@@ -1,0 +1,15 @@
+.SaveLoadingButton .MuiLoadingButton-root,
+.SaveLoadingButton .MuiLoadingButton-loading,
+.SaveLoadingButton .MuiLoadingButton-root:hover {
+    font-size: 12px;
+    background: #2eaf6e;
+    color: white;
+    width: 19%;
+    height: 28px;
+    float: right;
+    border: none;
+}
+
+.SaveLoadingButton .MuiLoadingButton-root:hover {
+    background: #25955d;
+}

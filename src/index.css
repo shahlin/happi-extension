@@ -4,8 +4,17 @@
 }
 
 html {
-    width: 32em;
-    height: 600px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 25px;
+    width: 35em;
+    padding: 19px 25px;
+    padding-bottom: 0;
+    margin-top: -20px;
+}
+
+html::-webkit-scrollbar {
+    display: none !important
+}
+
+body::-webkit-scrollbar {
+    display: none !important
 }

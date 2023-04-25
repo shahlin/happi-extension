@@ -9,7 +9,7 @@ function Questions() {
         <div className="AllQuestionsContainer">
             <OverallProductivityQuestion />
             <TimeOfDayQuestion />
-            <Divider sx={{ marginBottom: '25px' }} variant="middle" />
+            <Divider sx={{ marginBottom: '15px' }} variant="middle" />
             <GenericQuestion question="Were you distracted?" />
             <GenericQuestion question="Did you work with other people?" />
             <GenericQuestion question="Were your interrupted during work?" />

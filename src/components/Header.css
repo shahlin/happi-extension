@@ -1,9 +1,7 @@
-header {
-    margin-bottom: 15px;
-}
-
 .logo {
-    width: 15%;
-    display: block;
-    margin: 0 auto;
+    width: 70px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    transform: rotate(270deg);
 }

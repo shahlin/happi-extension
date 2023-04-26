@@ -4,12 +4,13 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Tooltip from '@mui/material/Tooltip';
 import './TimeOfDayQuestion.css'
 
-function TimeOfDayQuestion() {
-    const [answers, setAnswers] = useState(() => []);
+function TimeOfDayQuestion(props) {
+    const [answer, setAnswer] = useState();
 
-    const handleAnswer = (event, newAnswers) => {
-        if (newAnswers !== null) {
-            setAnswers(newAnswers);
+    const handleAnswer = (event, newAnswer) => {
+        if (newAnswer !== null) {
+            setAnswer(newAnswer);
+            props.onAnswerChange(props.qkey, newAnswer);
         }
     };
 
@@ -20,7 +21,7 @@ function TimeOfDayQuestion() {
             <div className='TimeOfDayAnswersContainer'>
                 <ToggleButtonGroup
                     className='TimeOfDayAnswerButtonGroup'
-                    value={answers}
+                    value={answer}
                     onChange={handleAnswer}
                     aria-label='answers'
                     exclusive

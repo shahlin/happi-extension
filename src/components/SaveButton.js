@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CheckIcon from '@mui/icons-material/Check';
+import { callStoreAnswersAPI } from '../utils/APIUtils';
 import './SaveButton.css';
 
-function SaveButton() {
+function SaveButton(props) {
     const [isLoading, setLoading] = useState(false);
 
     function performSave() {
-        setLoading(true)
+        setLoading(true);
+
+        callStoreAnswersAPI(props.answers);
     }
 
     return (

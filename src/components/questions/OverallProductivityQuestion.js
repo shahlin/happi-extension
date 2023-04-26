@@ -3,17 +3,18 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import './OverallProductivityQuestion.css'
 
-function OverallProductivityQuestion() {
-    const [answers, setAnswers] = useState(() => []);
+function OverallProductivityQuestion(props) {
+    const [answer, setAnswer] = useState();
 
     // TODO: Find a better way to do this
     const [isShownUnhappyAnswer, setShownUnhappyAnswer] = useState(true)
     const [isShownNeutralAnswer, setShownNeutralAnswer] = useState(true)
     const [isShownHappyAnswer, setShownHappyAnswer] = useState(true)
 
-    const handleAnswer = (event, newAnswers) => {
-        if (newAnswers !== null) {
-            setAnswers(newAnswers);
+    const handleAnswer = (event, newAnswer) => {
+        if (newAnswer !== null) {
+            setAnswer(newAnswer);
+            props.onAnswerChange(props.qkey, newAnswer);
         }
     };
 
@@ -24,7 +25,7 @@ function OverallProductivityQuestion() {
             <div className='OverallProductivityAnswersContainer'>
                 <ToggleButtonGroup
                     className='OverallProductivityAnswerButtonGroup'
-                    value={answers}
+                    value={answer}
                     onChange={handleAnswer}
                     aria-label='answers'
                     exclusive

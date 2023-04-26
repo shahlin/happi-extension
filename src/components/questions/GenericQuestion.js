@@ -4,11 +4,12 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import './GenericQuestion.css'
 
 function GenericQuestion(props) {
-    const [answers, setAnswers] = useState();
+    const [answer, setAnswer] = useState();
 
-    const handleAnswer = (event, newAnswers) => {
-        if (newAnswers !== null) {
-            setAnswers(newAnswers);
+    const handleAnswer = (event, newAnswer) => {
+        if (newAnswer !== null) {
+            setAnswer(newAnswer);
+            props.onAnswerChange(props.qkey, newAnswer);
         }
     };
 
@@ -40,7 +41,7 @@ function GenericQuestion(props) {
             </span>
             <ToggleButtonGroup
                 className='GenericAnswerButtonGroup'
-                value={answers}
+                value={answer}
                 onChange={handleAnswer}
                 aria-label='answers'
                 size='small'

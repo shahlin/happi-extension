@@ -2,6 +2,7 @@ import { useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CheckIcon from '@mui/icons-material/Check';
 import { callStoreAnswersAPI } from '../utils/APIUtils';
+import { TOTAL_QUESTIONS_COUNT } from '../utils/Constants';
 import './SaveButton.css';
 
 function SaveButton(props) {
@@ -20,6 +21,7 @@ function SaveButton(props) {
                 variant="outlined"
                 onClick={performSave}
                 loading={isLoading}
+                disabled={Object.keys(props.answers).length !== TOTAL_QUESTIONS_COUNT}
             >
                 Save
             </LoadingButton>

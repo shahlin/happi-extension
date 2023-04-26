@@ -13,3 +13,8 @@
 .SaveLoadingButton .MuiLoadingButton-root:hover {
     background: #25955d;
 }
+
+.SaveLoadingButton .Mui-disabled {
+    background-color: rgba(46, 175, 110, 0.1);
+    border: none !important;
+}

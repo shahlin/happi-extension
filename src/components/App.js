@@ -3,11 +3,12 @@ import Header from './Header';
 import AllQuestions from './questions/AllQuestions';
 import SaveButton from './SaveButton';
 import { useEffect } from "react";
-import { getLoggedInUserEmail } from '../utils/AuthUtils';
+import { storeAuthKeys, removeAuthKeys, getEmailPromise } from '../utils/AuthUtils';
 
 function App() {
     useEffect(() => {
-        console.log(getLoggedInUserEmail());
+        // removeAuthKeys(); /* For debugging */
+        storeAuthKeys();
     });
 
     return (

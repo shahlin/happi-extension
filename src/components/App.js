@@ -8,23 +8,15 @@ import { storeAuthKeys, removeAuthKeys } from '../utils/AuthUtils';
 function App() {
     const [answers, setAnswers] = useState({});
 
-    // TODO: Gets executed everytime an answer is changed, check why
     useEffect(() => {
         // removeAuthKeys(); /* For debugging */
         storeAuthKeys();
-    });
-
-    function handleAnswerChange(qkey, aValue) {
-        setAnswers({
-            ...answers,
-            [qkey]: aValue
-        });
-    }
+    }, []);
 
     return (
         <div className="Container">
             <Header />
-            <AllQuestions onAnswerChange={handleAnswerChange} />
+            <AllQuestions setAnswers={setAnswers}  />
             <SaveButton answers={answers} />
         </div>
     );

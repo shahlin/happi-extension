@@ -7,7 +7,10 @@ import './AllQuestions.css'
 function Questions(props) {
 
     function handleAnswerChange(qkey, aValue) {
-        props.onAnswerChange(qkey, aValue);
+        props.setAnswers((prevAnswers) => ({
+            ...prevAnswers,
+            [qkey]: aValue
+        }));
     }
 
     return (

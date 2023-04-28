@@ -1,7 +1,6 @@
 .logo {
-    width: 70px;
+    height: 65px;
     position: absolute;
-    left: 0;
-    top: 40px;
-    transform: rotate(270deg);
+    left: 20px;
+    top: 25px;
 }

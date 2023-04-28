@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CheckIcon from '@mui/icons-material/Check';
-import { callStoreAnswersAPI } from '../utils/APIUtils';
+import { callStoreAnswersAPI } from '../utils/ApiUtils';
 import { TOTAL_QUESTIONS_COUNT } from '../utils/Constants';
 import './SaveButton.css';
 

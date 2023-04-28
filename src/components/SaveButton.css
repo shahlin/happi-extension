@@ -1,3 +1,7 @@
+.SaveLoadingButton {
+    display: inline;
+}
+
 .SaveLoadingButton .MuiLoadingButton-root,
 .SaveLoadingButton .MuiLoadingButton-loading,
 .SaveLoadingButton .MuiLoadingButton-root:hover {

@@ -35,22 +35,22 @@ function TimeOfDayQuestion(props) {
                     </ToggleButton>
                     <ToggleButton className='TimeOfDayAnswerButton' size='small' value='morning' aria-label='morning'>
                         <Tooltip title='In the morning' arrow>
-                            <img src="/morning.png" draggable="false" />
+                            <img src="/morning.png" draggable="false" alt='In the morning' />
                         </Tooltip>
                     </ToggleButton>
                     <ToggleButton className='TimeOfDayAnswerButton' size='small' value='afternoon' aria-label='afternoon'>
                         <Tooltip title='In the afternoon' arrow>
-                            <img src="/afternoon.png" draggable="false" />
+                            <img src="/afternoon.png" draggable="false" alt='In the afternoon' />
                         </Tooltip>
                     </ToggleButton>
                     <ToggleButton className='TimeOfDayAnswerButton' size='small' value='evening' aria-label='evening'>
                         <Tooltip title='In the evening' arrow>
-                            <img src="/evening.png" draggable="false" />
+                            <img src="/evening.png" draggable="false" alt='In the evening' />
                         </Tooltip>
                     </ToggleButton>
                     <ToggleButton className='TimeOfDayAnswerButton' size='small' value='night' aria-label='night'>
                         <Tooltip title='At night' arrow>
-                            <img src="/night.png" draggable="false" />
+                            <img src="/night.png" draggable="false" alt='At night' />
                         </Tooltip>
                     </ToggleButton>
                     <ToggleButton className='TimeOfDayAnswerButton' size='small' value='equal' aria-label='equal'>

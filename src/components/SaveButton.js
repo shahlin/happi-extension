@@ -11,7 +11,13 @@ function SaveButton(props) {
     function performSave() {
         setLoading(true);
 
-        callStoreAnswersAPI(props.answers);
+        try {
+            callStoreAnswersAPI(props.answers);
+        } catch (e) {
+            alert("Something went wrong");
+        }
+
+        setLoading(false);
     }
 
     return (

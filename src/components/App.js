@@ -4,13 +4,12 @@ import AllQuestions from './questions/AllQuestions';
 import SyncStatus from './SyncStatus';
 import SaveButton from './SaveButton';
 import { useState, useEffect } from "react";
-import { storeAuthKeys, removeAuthKeys } from '../utils/AuthUtils';
+import { storeAuthKeys } from '../utils/AuthUtils';
 
 function App() {
     const [answers, setAnswers] = useState({});
 
     useEffect(() => {
-        // removeAuthKeys(); /* For debugging */
         storeAuthKeys();
     }, []);
 

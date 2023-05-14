@@ -27,7 +27,7 @@ export function getDateFromDateObject(date) {
 }
 
 export function getTimeFromDateObject(date) {
-    return date.toISOString().toString().split(" ")[4];
+    return date.toString().split(" ")[4];
 }
 
 export function getSystemTimezone() {

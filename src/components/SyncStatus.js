@@ -20,7 +20,7 @@ function SyncStatus() {
 
     useEffect(() => {
         getSyncStatusText().then(result => setSyncStatusText(result));
-    }, []);
+    });
 
     return (
         <span className="SyncStatusText">

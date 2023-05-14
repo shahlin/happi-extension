@@ -9,18 +9,21 @@ import './SaveButton.css';
 
 function SaveButton(props) {
     const [isLoading, setLoading] = useState(false);
+    const [isDisabled, setDisabled] = useState(false);
 
     function performSave() {
         setLoading(true);
 
-        try {
-            callStoreAnswersAPI(props.answers);
+        callStoreAnswersAPI(props.answers).then((result) => {
             storeKey(LAST_SYNCED_AT_STORAGE_KEY, getCurrentTimestamp());
-        } catch (e) {
-            alert("Something went wrong");
-        }
+            props.setSuccessStatus(true);
+        }).catch((error) => {
+            props.setSuccessStatus(false);
+        });
 
+        props.setShowStatusAlert(true);
         setLoading(false);
+        setDisabled(true);
     }
 
     return (
@@ -30,7 +33,7 @@ function SaveButton(props) {
                 variant="outlined"
                 onClick={performSave}
                 loading={isLoading}
-                disabled={Object.keys(props.answers).length !== TOTAL_QUESTIONS_COUNT}
+                disabled={(Object.keys(props.answers).length !== TOTAL_QUESTIONS_COUNT) || (isDisabled)}
             >
                 Save
             </LoadingButton>

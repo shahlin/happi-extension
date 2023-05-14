@@ -20,7 +20,7 @@ export async function callStoreAnswersAPI(answers) {
 
         return Promise.resolve()
     }).catch((error) => {
-        throw error;
+        return Promise.reject(error);
     });
 }
 

@@ -2,7 +2,9 @@ import { useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CheckIcon from '@mui/icons-material/Check';
 import { callStoreAnswersAPI } from '../utils/ApiUtils';
-import { TOTAL_QUESTIONS_COUNT } from '../utils/Constants';
+import { TOTAL_QUESTIONS_COUNT, LAST_SYNCED_AT_STORAGE_KEY } from '../utils/Constants';
+import { storeKey } from '../utils/StorageUtils'
+import { getCurrentTimestamp } from '../utils/TimeUtils'
 import './SaveButton.css';
 
 function SaveButton(props) {
@@ -13,6 +15,7 @@ function SaveButton(props) {
 
         try {
             callStoreAnswersAPI(props.answers);
+            storeKey(LAST_SYNCED_AT_STORAGE_KEY, getCurrentTimestamp());
         } catch (e) {
             alert("Something went wrong");
         }

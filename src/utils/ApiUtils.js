@@ -1,5 +1,6 @@
 import { CLIENT_ID_STORAGE_KEY, CLIENT_EMAIL_STORAGE_KEY } from "./Constants";
 import { getKeyPromise } from './StorageUtils'
+import { getCurrentSystemDate, getCurrentSystemTime, getSystemTimezone } from './TimeUtils'
 
 export async function callStoreAnswersAPI(answers) {
     const clientId = await getKeyPromise(CLIENT_ID_STORAGE_KEY);
@@ -38,8 +39,8 @@ function buildStoreAnswerRequest(clientId, clientEmail, answers) {
             "breaks_frequency": answers.breaks_frequency,
             "sleep_quality": answers.sleep_quality
         },
-        "system_date": new Date().toISOString().slice(0, 10),
-        "system_time": new Date().toString().split(" ")[4],
-        "timezone": Intl.DateTimeFormat().resolvedOptions().timeZone
+        "system_date": getCurrentSystemDate(),
+        "system_time": getCurrentSystemTime(),
+        "timezone": getSystemTimezone()
     }
 }

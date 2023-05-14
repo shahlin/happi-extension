@@ -1,15 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CheckIcon from '@mui/icons-material/Check';
 import { callStoreAnswersAPI } from '../utils/ApiUtils';
-import { TOTAL_QUESTIONS_COUNT, LAST_SYNCED_AT_STORAGE_KEY } from '../utils/Constants';
-import { storeKey } from '../utils/StorageUtils'
-import { getCurrentTimestamp } from '../utils/TimeUtils'
+import { TOTAL_QUESTIONS_COUNT, LAST_SYNCED_AT_STORAGE_KEY, NUMBER_OF_MINUTES_TO_WAIT_BEFORE_ALLOWING_NEXT_SAVE } from '../utils/Constants';
+import { getKeyPromise, storeKey } from '../utils/StorageUtils'
+import { getCurrentTimestamp, minutesPassedSince } from '../utils/TimeUtils'
 import './SaveButton.css';
 
 function SaveButton(props) {
     const [isLoading, setLoading] = useState(false);
     const [isDisabled, setDisabled] = useState(false);
+
+    useEffect(() => {
+        async function setDisabledIfRecentlySaved() {
+            const lastSyncedAtTimestamp = await getKeyPromise(LAST_SYNCED_AT_STORAGE_KEY);
+            if (minutesPassedSince(lastSyncedAtTimestamp) <= NUMBER_OF_MINUTES_TO_WAIT_BEFORE_ALLOWING_NEXT_SAVE) {
+                setDisabled(true);
+            }
+        }
+
+        setDisabledIfRecentlySaved()
+    });
 
     function performSave() {
         setLoading(true);

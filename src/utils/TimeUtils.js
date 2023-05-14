@@ -44,3 +44,7 @@ export function dateIsToday(date) {
 
     return false;
 }
+
+export function minutesPassedSince(timestamp) {
+    return Math.floor((Date.now() - timestamp) / 1000 / 60);
+}

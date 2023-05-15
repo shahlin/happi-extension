@@ -6,6 +6,7 @@ import SaveButton from './SaveButton';
 import StatusAlert from './StatusAlert';
 import { useState, useEffect } from "react";
 import { storeAuthKeys } from '../utils/AuthUtils';
+import { clearStoredAnswersFromPreviousDay } from '../utils/AnswerUtils';
 
 function App() {
     const [answers, setAnswers] = useState({});
@@ -14,6 +15,7 @@ function App() {
 
     useEffect(() => {
         storeAuthKeys();
+        clearStoredAnswersFromPreviousDay();
     }, []);
 
     return (

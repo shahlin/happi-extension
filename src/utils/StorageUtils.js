@@ -11,6 +11,6 @@ export function storeKey(key, value) {
     chrome.storage.sync.set({ [key]: value });
 }
 
-export async function clearAllKeys() {
-    await chrome.storage.sync.clear();
+export function remove(key) {
+    chrome.storage.sync.remove(key);
 }

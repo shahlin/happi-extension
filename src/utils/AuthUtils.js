@@ -1,5 +1,5 @@
 /*global chrome*/
-import { getKeyPromise, storeKey, clearAllKeys } from './StorageUtils';
+import { getKeyPromise, storeKey } from './StorageUtils';
 import { CLIENT_ID_STORAGE_KEY, CLIENT_EMAIL_STORAGE_KEY } from './Constants';
 
 export function generateUniqueToken() {
@@ -31,8 +31,4 @@ export async function storeAuthKeys() {
 
     console.log("CLIENT ID: " + clientId);
     console.log("CLIENT EMAIL: " + email);
-}
-
-export function removeAuthKeys() {
-    clearAllKeys();
 }

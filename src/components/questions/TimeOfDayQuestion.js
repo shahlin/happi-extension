@@ -1,11 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Tooltip from '@mui/material/Tooltip';
+import { handleAnswersIfExistsInStorage } from '../../utils/AnswerUtils';
 import './TimeOfDayQuestion.css'
 
 function TimeOfDayQuestion(props) {
     const [answer, setAnswer] = useState();
+
+    useEffect(() => {
+        handleAnswersIfExistsInStorage((existingAnswer) => {
+            setAnswer(existingAnswer);
+            props.onAnswerChange(props.qkey, existingAnswer);
+        }, props.qkey);
+    }, []);
 
     const handleAnswer = (event, newAnswer) => {
         if (newAnswer !== null) {

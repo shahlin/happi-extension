@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import { handleAnswersIfExistsInStorage } from '../../utils/AnswerUtils';
 import './OverallProductivityQuestion.css'
 
 function OverallProductivityQuestion(props) {
@@ -10,6 +11,13 @@ function OverallProductivityQuestion(props) {
     const [isShownUnhappyAnswer, setShownUnhappyAnswer] = useState(true)
     const [isShownNeutralAnswer, setShownNeutralAnswer] = useState(true)
     const [isShownHappyAnswer, setShownHappyAnswer] = useState(true)
+
+    useEffect(() => {
+        handleAnswersIfExistsInStorage((existingAnswer) => {
+            setAnswer(existingAnswer);
+            props.onAnswerChange(props.qkey, existingAnswer);
+        }, props.qkey);
+    }, []);
 
     const handleAnswer = (event, newAnswer) => {
         if (newAnswer !== null) {

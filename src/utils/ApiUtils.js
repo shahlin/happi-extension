@@ -6,12 +6,16 @@ export async function callStoreAnswersAPI(answers) {
     const clientId = await getKeyPromise(CLIENT_ID_STORAGE_KEY);
     const clientEmail = await getKeyPromise(CLIENT_EMAIL_STORAGE_KEY);
 
+    const signature = getAwsSignature();
+
     await fetch(process.env.REACT_APP_API_URL + '/save', {
         method: 'POST',
         mode: 'no-cors',
         body: JSON.stringify(buildStoreAnswerRequest(clientId, clientEmail, answers)),
         headers: {
-            'Content-type': 'application/json; charset=UTF-8'
+            'Content-type': 'application/json; charset=UTF-8',
+            'Origin': '*',
+            ...signature.headers
         },
     }).then((response) => {
         if (!response.ok) {
@@ -43,4 +47,15 @@ function buildStoreAnswerRequest(clientId, clientEmail, answers) {
         "system_time": getCurrentSystemTime(),
         "timezone": getSystemTimezone()
     }
+}
+
+function getAwsSignature() {
+    const aws4 = require('aws4');
+    const CREDS = { accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY, secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY }
+
+    return aws4.sign({
+        service: 'lambda',
+        region: 'eu-west-1',
+        host: process.env.REACT_APP_API_URL
+    }, CREDS)
 }

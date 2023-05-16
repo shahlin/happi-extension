@@ -24,8 +24,20 @@ function OverallProductivityQuestion(props) {
         if (newAnswer !== null) {
             setAnswer(newAnswer);
             props.onAnswerChange(props.qkey, newAnswer);
+
+            highlightSelectedAnswer(newAnswer);
         }
     };
+
+    function highlightSelectedAnswer(answer) {
+        setShownUnhappyAnswer(false);
+        setShownNeutralAnswer(false);
+        setShownHappyAnswer(false);
+
+        if (answer == 'unhappy') { setShownUnhappyAnswer(true); }
+        if (answer == 'neutral') { setShownNeutralAnswer(true); }
+        if (answer == 'happy') { setShownHappyAnswer(true); }
+    }
 
     return (
         <div className='OverallProductivityQuestionContainer'>
@@ -40,8 +52,8 @@ function OverallProductivityQuestion(props) {
                     exclusive
                 >
                     <ToggleButton
-                        onMouseEnter={() => { setShownHappyAnswer(false); setShownNeutralAnswer(false); setShownUnhappyAnswer(true) }}
-                        onMouseLeave={() => { setShownHappyAnswer(true); setShownNeutralAnswer(true); setShownUnhappyAnswer(true) }}
+                        onMouseEnter={() => { if (!answer) { setShownHappyAnswer(false); setShownNeutralAnswer(false); setShownUnhappyAnswer(true); } }}
+                        onMouseLeave={() => { if (!answer) { setShownHappyAnswer(true); setShownNeutralAnswer(true); setShownUnhappyAnswer(true); } }}
                         className={`OverallProductivityAnswerButton ${isShownUnhappyAnswer ? '' : 'UnselectedToggleOption'}`}
                         size='small'
                         value='unhappy'
@@ -57,8 +69,8 @@ function OverallProductivityQuestion(props) {
                         </Tooltip>
                     </ToggleButton>
                     <ToggleButton
-                        onMouseEnter={() => { setShownHappyAnswer(false); setShownNeutralAnswer(true); setShownUnhappyAnswer(false) }}
-                        onMouseLeave={() => { setShownHappyAnswer(true); setShownNeutralAnswer(true); setShownUnhappyAnswer(true) }}
+                        onMouseEnter={() => { if (!answer) { setShownHappyAnswer(false); setShownNeutralAnswer(true); setShownUnhappyAnswer(false); } }}
+                        onMouseLeave={() => { if (!answer) { setShownHappyAnswer(true); setShownNeutralAnswer(true); setShownUnhappyAnswer(true); } }}
                         className={`OverallProductivityAnswerButton ${isShownNeutralAnswer ? '' : 'UnselectedToggleOption'}`}
                         size='small'
                         value='neutral'
@@ -74,8 +86,8 @@ function OverallProductivityQuestion(props) {
                         </Tooltip>
                     </ToggleButton>
                     <ToggleButton
-                        onMouseEnter={() => { setShownHappyAnswer(true); setShownNeutralAnswer(false); setShownUnhappyAnswer(false) }}
-                        onMouseLeave={() => { setShownHappyAnswer(true); setShownNeutralAnswer(true); setShownUnhappyAnswer(true) }}
+                        onMouseEnter={() => { if (!answer) { setShownHappyAnswer(true); setShownNeutralAnswer(false); setShownUnhappyAnswer(false); } }}
+                        onMouseLeave={() => { if (!answer) { setShownHappyAnswer(true); setShownNeutralAnswer(true); setShownUnhappyAnswer(true); } }}
                         className={`OverallProductivityAnswerButton ${isShownHappyAnswer ? '' : 'UnselectedToggleOption'}`}
                         size='small'
                         value='happy'

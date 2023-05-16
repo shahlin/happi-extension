@@ -17,6 +17,8 @@ function OverallProductivityQuestion(props) {
         handleAnswersIfExistsInStorage((existingAnswer) => {
             setAnswer(existingAnswer);
             props.onAnswerChange(props.qkey, existingAnswer);
+
+            highlightSelectedAnswer(existingAnswer);
         }, props.qkey);
     }, []);
 

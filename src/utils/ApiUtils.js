@@ -18,10 +18,6 @@ export async function callStoreAnswersAPI(answers) {
             ...signature.headers
         },
     }).then((response) => {
-        if (!response.ok) {
-            return Promise.reject(response);
-        }
-
         return Promise.resolve()
     }).catch((error) => {
         return Promise.reject(error);

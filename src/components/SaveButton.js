@@ -36,11 +36,11 @@ function SaveButton(props) {
             props.setSuccessStatus(true);
         }).catch((error) => {
             props.setSuccessStatus(false);
+        }).finally(() => {
+            props.setShowStatusAlert(true);
+            setLoading(false);
+            setDisabled(true);
         });
-
-        props.setShowStatusAlert(true);
-        setLoading(false);
-        setDisabled(true);
     }
 
     return (

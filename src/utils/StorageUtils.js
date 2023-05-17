@@ -7,7 +7,6 @@ export function getKeyPromise(key) {
 }
 
 export function storeKey(key, value) {
-    console.log("Setting key value... " + JSON.stringify({ [key]: value }))
     chrome.storage.sync.set({ [key]: value });
 }
 

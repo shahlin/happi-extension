@@ -25,7 +25,7 @@ function SaveButton(props) {
         }
 
         setDisabledIfRecentlySaved()
-    });
+    }, []);
 
     function performSave() {
         setLoading(true);

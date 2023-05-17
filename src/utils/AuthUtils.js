@@ -19,7 +19,6 @@ export async function storeAuthKeys() {
     let email = await getKeyPromise(CLIENT_EMAIL_STORAGE_KEY);
 
     if (!clientId) {
-        console.log("First time usage, creating client ID...");
         clientId = generateUniqueToken();
         storeKey(CLIENT_ID_STORAGE_KEY, clientId);
     }
@@ -28,7 +27,4 @@ export async function storeAuthKeys() {
         email = await getEmailPromise();
         storeKey(CLIENT_EMAIL_STORAGE_KEY, email);
     }
-
-    console.log("CLIENT ID: " + clientId);
-    console.log("CLIENT EMAIL: " + email);
 }

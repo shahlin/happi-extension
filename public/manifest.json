@@ -15,9 +15,6 @@
         "identity.email",
         "storage"
     ],
-    "host_permissions": [
-        "http://*/"
-    ],
     "action": {
         "default_popup": "index.html"
     }

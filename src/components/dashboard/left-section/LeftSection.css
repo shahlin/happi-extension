@@ -1,0 +1,11 @@
+.LeftSection {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 5%;
+    padding-right: 0;
+}
+
+.LeftSectionLogo {
+    width: 35%;
+    margin: 0 auto;
+}

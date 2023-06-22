@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+.Navigation {
+    padding: 0;
+}
+
+.NavItem {
+    list-style-type: none;
+    margin: 30% 0;
+    display: flex;
+    align-items: center;
+}
+
+.NavLink {
+    margin-left: 10px;
+    color: #303030;
+    text-decoration: none;
+    font-family: Dongle;
+    font-size: 28px;
+}

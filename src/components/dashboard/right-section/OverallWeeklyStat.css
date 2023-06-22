@@ -1,0 +1,34 @@
+.OverallWeeklyStatText {
+    font-family: 'Dongle';
+    font-size: 36px;
+    margin: 0;
+}
+
+.OverallWeeklyStatBar,
+.OverallWeeklyStatSingleBar {
+    width: 100%;
+    height: 13px;
+}
+
+.OverallWeeklyStatBar {
+    border-radius: 10px;
+}
+
+.OverallWeeklyStatSingleBar {
+    display: inline-block;
+}
+
+#OverallWeeklyStatUnhappyBar {
+    background-color: #D3374E;
+    border-radius: 10px 0 0 10px;
+}
+
+#OverallWeeklyStatNeutralBar {
+    background-color: #FDC70E;
+    border-radius: 0;
+}
+
+#OverallWeeklyStatHappyBar {
+    background-color: #2EAF6E;
+    border-radius: 0 10px 10px 0;
+}

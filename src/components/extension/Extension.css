@@ -1,4 +1,8 @@
 .Container {
-  font-family: 'Dongle';
-  font-size: 22px;
+    font-family: 'Dongle';
+    font-size: 22px;
+    width: 25em;
+    padding: 19px 25px;
+    padding-bottom: 0;
+    margin-top: -20px;
 }

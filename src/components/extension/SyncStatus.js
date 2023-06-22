@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { getKeyPromise } from '../utils/StorageUtils'
-import { getDateObjectFromTimestamp, dateIsToday, getTimeFromDateObjectIn12HourFormat } from '../utils/TimeUtils'
-import { LAST_SYNCED_AT_STORAGE_KEY } from '../utils/Constants'
+import { getKeyPromise } from '../../utils/StorageUtils'
+import { getDateObjectFromTimestamp, dateIsToday, getTimeFromDateObjectIn12HourFormat } from '../../utils/TimeUtils'
+import { LAST_SYNCED_AT_STORAGE_KEY } from '../../utils/Constants'
 import './SyncStatus.css';
 
 async function getSyncStatusText() {

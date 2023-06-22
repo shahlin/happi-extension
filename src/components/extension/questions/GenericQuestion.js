@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import './GenericQuestion.css'
-import { handleAnswersIfExistsInStorage } from '../../utils/AnswerUtils';
+import { handleAnswersIfExistsInStorage } from '../../../utils/AnswerUtils';
 
 function GenericQuestion(props) {
     const [answer, setAnswer] = useState();

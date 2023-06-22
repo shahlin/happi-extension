@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CheckIcon from '@mui/icons-material/Check';
-import { callStoreAnswersAPI } from '../utils/ApiUtils';
+import { callStoreAnswersAPI } from '../../utils/ApiUtils';
 import {
     TOTAL_QUESTIONS_COUNT,
     LAST_SYNCED_AT_STORAGE_KEY,
     NUMBER_OF_MINUTES_TO_WAIT_BEFORE_ALLOWING_NEXT_SAVE,
     SELECTED_ANSWERS_STORAGE_KEY
-} from '../utils/Constants';
-import { getKeyPromise, storeKey } from '../utils/StorageUtils'
-import { getCurrentTimestamp, minutesPassedSince } from '../utils/TimeUtils'
+} from '../../utils/Constants';
+import { getKeyPromise, storeKey } from '../../utils/StorageUtils'
+import { getCurrentTimestamp, minutesPassedSince } from '../../utils/TimeUtils'
 import './SaveButton.css';
 
 function SaveButton(props) {

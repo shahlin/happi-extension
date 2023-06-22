@@ -1,14 +1,14 @@
-import './App.css';
+import './Extension.css';
 import Header from './Header';
 import AllQuestions from './questions/AllQuestions';
 import SyncStatus from './SyncStatus';
 import SaveButton from './SaveButton';
 import StatusAlert from './StatusAlert';
 import { useState, useEffect } from "react";
-import { storeAuthKeys } from '../utils/AuthUtils';
-import { clearStoredAnswersFromPreviousDay } from '../utils/AnswerUtils';
+import { storeAuthKeys } from '../../utils/AuthUtils';
+import { clearStoredAnswersFromPreviousDay } from '../../utils/AnswerUtils';
 
-function App() {
+function Extension() {
     const [answers, setAnswers] = useState({});
     const [showStatusAlert, setShowStatusAlert] = useState(false);
     const [successStatus, setSuccessStatus] = useState(false);
@@ -31,4 +31,4 @@ function App() {
     );
 }
 
-export default App;
+export default Extension;

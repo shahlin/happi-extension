@@ -1,6 +1,20 @@
-.logo {
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Logo {
     height: 65px;
     position: absolute;
     left: 20px;
     top: 25px;
+}
+
+.DashboardLink {
+    position: absolute;
+    top: 22px;
+}
+
+.DashboardIcon {
+    width: 25px;
 }

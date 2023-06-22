@@ -1,10 +1,10 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import NotFoundErrorPage from './pages/page-not-found';
 import ExtensionPage from './pages/extension';
 import DashboardPage from './pages/dashboard';
 
 export default function router() {
-    return createBrowserRouter([
+    return createHashRouter([
         {
             path: "/",
             element: <ExtensionPage />,

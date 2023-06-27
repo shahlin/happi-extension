@@ -1,5 +1,6 @@
 .Navigation {
     padding: 0;
+    box-sizing: content-box;
 }
 
 .NavItem {
@@ -15,4 +16,11 @@
     text-decoration: none;
     font-family: Dongle;
     font-size: 28px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+.NavLink:hover,
+.NavLink.active {
+    border-bottom: 1px dashed #ccc;
 }

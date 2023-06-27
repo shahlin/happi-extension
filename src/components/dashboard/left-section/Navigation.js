@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation() {
@@ -10,7 +11,7 @@ function Navigation() {
                     <path d="M8.33325 11.4584V16.6667" stroke="#898989" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M3.125 12.5C3.125 4.77969 4.77969 3.125 12.5 3.125C20.2203 3.125 21.875 4.77969 21.875 12.5C21.875 20.2203 20.2203 21.875 12.5 21.875C4.77969 21.875 3.125 20.2203 3.125 12.5Z" stroke="#898989" stroke-width="1.25" />
                 </svg>
-                <a href="#" className="NavLink">Dashboard</a>
+                <NavLink className="NavLink" activeStyle="SelectedNavLink" to="/dashboard">Dashboard</NavLink>
             </li>
             <li className='NavItem'>
                 <svg width="25" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">

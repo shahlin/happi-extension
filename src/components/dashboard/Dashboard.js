@@ -1,15 +1,12 @@
 import './Dashboard.css';
-import LeftSection from './left-section/LeftSection';
-import RightSection from './right-section/RightSection';
-import Division from './division/Division';
+import PageContent from './PageContent';
+import Page from '../common/Page';
 
 function Dashboard() {
     return (
         <div className='Dashboard'>
-            <LeftSection />
-            <Division />
-            <RightSection />
-        </div>
+            <Page pageContent={<PageContent />} />
+        </div >
     );
 }
 

@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 function LeftSection() {
     return (
         <div className='LeftSection'>
-            <img className='LeftSectionLogo' src='logo/logo.png' />
+            <img className='LeftSectionLogo' src='logo/logo.png' alt='Happi Logo' />
             <Navigation />
         </div>
     );

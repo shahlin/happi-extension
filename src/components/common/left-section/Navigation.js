@@ -11,7 +11,7 @@ function Navigation() {
                     <path d="M8.33325 11.4584V16.6667" stroke="#898989" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M3.125 12.5C3.125 4.77969 4.77969 3.125 12.5 3.125C20.2203 3.125 21.875 4.77969 21.875 12.5C21.875 20.2203 20.2203 21.875 12.5 21.875C4.77969 21.875 3.125 20.2203 3.125 12.5Z" stroke="#898989" stroke-width="1.25" />
                 </svg>
-                <NavLink className="NavLink" activeStyle="SelectedNavLink" to="/dashboard">Dashboard</NavLink>
+                <NavLink className="NavLink" to="/dashboard">Dashboard</NavLink>
             </li>
             <li className='NavItem'>
                 <svg width="25" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +24,7 @@ function Navigation() {
                         </clipPath>
                     </defs>
                 </svg>
-                <a href="#" className="NavLink">SPACE Framework</a>
+                <NavLink className="NavLink" to="/space-framework">SPACE Framework</NavLink>
             </li>
             <li className='NavItem'>
                 <svg width="25" height="25" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,19 +34,19 @@ function Navigation() {
                     <rect x="0.353027" y="5.75653" width="1.47262" height="3.33467" rx="0.736308" transform="rotate(-90 0.353027 5.75653)" fill="#898989" />
                     <rect x="0.4" y="19.0117" width="18.6118" height="5.2" transform="rotate(-90 0.4 19.0117)" stroke="#898989" stroke-width="0.8" />
                 </svg>
-                <a href="#" className="NavLink">Metrics</a>
+                <NavLink className="NavLink" to="/metrics">Metrics</NavLink>
             </li>
             <li className='NavItem'>
                 <svg width="25" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 7.50004V11.6667M8 15.8334C3.85787 15.8334 0.5 12.4755 0.5 8.33337C0.5 4.19124 3.85787 0.833374 8 0.833374C12.1422 0.833374 15.5 4.19124 15.5 8.33337C15.5 12.4755 12.1422 15.8334 8 15.8334ZM8.0415 5.00004V5.08337L7.9585 5.08354V5.00004H8.0415Z" stroke="#898989" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <a href="#" className="NavLink">FAQ</a>
+                <NavLink className="NavLink" to="/faq">FAQ</NavLink>
             </li>
             <li className='NavItem'>
                 <svg width="25" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.66667 6.66667H13.3333M6.66667 10H10.8333M2.5 8.33333C2.5 3.87255 4.26471 2.5 10 2.5C15.7353 2.5 17.5 3.87255 17.5 8.33333C17.5 12.7941 15.7353 14.1667 10 14.1667C9.716 14.1667 9.44175 14.1633 9.177 14.1563L5.83333 17.5V13.7449C3.36067 13.0577 2.5 11.4486 2.5 8.33333Z" stroke="#898989" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <a href="#" className="NavLink">Contact</a>
+                <NavLink className="NavLink" to="/contact">Contact</NavLink>
             </li>
         </ul>
     );

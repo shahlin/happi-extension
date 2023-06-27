@@ -1,10 +1,9 @@
-import OverallWeeklyStat from './OverallWeeklyStat';
 import './RightSection.css';
 
-function RightSection() {
+function RightSection(props) {
     return (
         <div className='RightSection'>
-            <OverallWeeklyStat />
+            {props.content}
         </div>
     );
 }

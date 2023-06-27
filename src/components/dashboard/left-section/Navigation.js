@@ -26,6 +26,16 @@ function Navigation() {
                 <a href="#" className="NavLink">SPACE Framework</a>
             </li>
             <li className='NavItem'>
+                <svg width="25" height="25" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.353027" y="15.3956" width="1.47262" height="2.7462" rx="0.736308" transform="rotate(-90 0.353027 15.3956)" fill="#898989" />
+                    <rect x="0.353027" y="12.1826" width="1.47262" height="3.33467" rx="0.736308" transform="rotate(-90 0.353027 12.1826)" fill="#898989" />
+                    <rect x="0.353027" y="8.96948" width="1.47262" height="2.25581" rx="0.736308" transform="rotate(-90 0.353027 8.96948)" fill="#898989" />
+                    <rect x="0.353027" y="5.75653" width="1.47262" height="3.33467" rx="0.736308" transform="rotate(-90 0.353027 5.75653)" fill="#898989" />
+                    <rect x="0.4" y="19.0117" width="18.6118" height="5.2" transform="rotate(-90 0.4 19.0117)" stroke="#898989" stroke-width="0.8" />
+                </svg>
+                <a href="#" className="NavLink">Metrics</a>
+            </li>
+            <li className='NavItem'>
                 <svg width="25" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 7.50004V11.6667M8 15.8334C3.85787 15.8334 0.5 12.4755 0.5 8.33337C0.5 4.19124 3.85787 0.833374 8 0.833374C12.1422 0.833374 15.5 4.19124 15.5 8.33337C15.5 12.4755 12.1422 15.8334 8 15.8334ZM8.0415 5.00004V5.08337L7.9585 5.08354V5.00004H8.0415Z" stroke="#898989" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>

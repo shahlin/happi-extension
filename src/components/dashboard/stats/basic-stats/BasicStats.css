@@ -1,0 +1,9 @@
+.BasicStats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BasicStatChart {
+    width: 350px;
+    height: 200px;
+}

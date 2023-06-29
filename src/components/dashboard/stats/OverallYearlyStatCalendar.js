@@ -5,7 +5,7 @@ function OverallYearlyStatCalendar() {
     return (
         <div className='OverallYearlyStatCalendar'>
             <div className='DashboardStatHeader'>
-                <span>Overall Satisfaction</span>
+                <h2>Overall Satisfaction</h2>
             </div>
             <ResponsiveCalendar
                 data={[
@@ -29,7 +29,7 @@ function OverallYearlyStatCalendar() {
                 from="2015-12-16"
                 to="2015-09-23"
                 emptyColor="#D9D9D9"
-                colors={['#61cdbb', '#97e3d5', '#e8c1a0', '#f47560']}
+                colors={['#61cdbb', '#D3374E', '#FDC70E', '#2EAF6E']}
                 margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
                 yearSpacing={40}
                 monthBorderColor="#ffffff"

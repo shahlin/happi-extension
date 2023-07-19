@@ -8,7 +8,7 @@ Lots of inspiration was taken off of a research done by Microsoft, GitHub and Un
 <a/>
 
 ## First Look
-<img src="https://github.com/shahlin/happi-extension/assets/32275018/0f2bc789-52be-4509-a77b-3efe31cc93e1" width="500"/>
+<img src="https://github.com/shahlin/happi-extension/assets/32275018/64ec8fd2-9c1c-480b-8f23-e7199ff2dbad" width="500"/>
 
 # Local Build
 > **Note**

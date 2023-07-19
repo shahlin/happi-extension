@@ -3,9 +3,12 @@ Happi is a chrome extension to measure your daily developer productivity by trac
 Lots of inspiration was taken off of a research done by Microsoft, GitHub and University of Victoria. They've called it the [SPACE framework](https://queue.acm.org/detail.cfm?id=3454124). It provides a holistic approach to measuring developer productivity. Happi uses this framework where possible and helps you track your developer productivity and find areas where you can do improve.
 
 <a href="https://chrome.google.com/webstore/detail/happi/enjnekjgcjcjhmdhegdgenhaghkfjfld">
-    <img src="https://edent.github.io/SuperTinyIcons/images/svg/chrome.svg" width="50" />
+    <img style="display:inline;" src="https://edent.github.io/SuperTinyIcons/images/svg/chrome.svg" width="30" />
     <div>Find Happi on Chrome!</div>
 <a/>
+
+## First Look
+<img src="https://github.com/shahlin/happi-extension/assets/32275018/0f2bc789-52be-4509-a77b-3efe31cc93e1" width="500"/>
 
 # Local Build
 > **Note**

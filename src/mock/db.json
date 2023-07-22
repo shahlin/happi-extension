@@ -1,0 +1,74 @@
+{
+    "overall-weekly-productivity": {
+        "weekly": {
+            "unhappy": 10,
+            "neutral": 50,
+            "happy": 40
+        },
+        "yearly": [
+            {
+                "date": "2023-01-01",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-01-02",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-01-03",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-01-04",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-01-05",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-01-08",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-01-09",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-01-10",
+                "value": "UNHAPPY"
+            }
+        ]
+    },
+    "basics": {
+        "sleep_quality": {
+            "good": 30,
+            "bad": 20,
+            "average": 50
+        },
+        "distractions_frequency": {
+            "yes": 30,
+            "mostly": 20,
+            "somewhat": 10,
+            "no": 40
+        },
+        "breaks_frequency": {
+            "yes": 30,
+            "mostly": 20,
+            "somewhat": 10,
+            "no": 40
+        },
+        "interruptions_frequency": {
+            "yes": 30,
+            "mostly": 20,
+            "somewhat": 10,
+            "no": 40
+        },
+        "amount_of_work_done": {
+            "yes": 30,
+            "mostly": 20,
+            "somewhat": 10,
+            "no": 40
+        }
+    }
+}

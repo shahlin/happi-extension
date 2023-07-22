@@ -11,13 +11,20 @@ Lots of inspiration was taken off of a research done by Microsoft, GitHub and Un
 <img src="https://github.com/shahlin/happi-extension/assets/32275018/64ec8fd2-9c1c-480b-8f23-e7199ff2dbad" width="500"/>
 
 # Local Build
-> **Note**
-> Only the UI can be accessed using this repository, the API is unavailable locally
-
 ## Build Project
 1. Clone the repository locally
 2. Install dependencies by running `npm install` on your terminal
-3. Build project by running `npm run build`
+3. Duplicate the `.env.sample` file and rename it to `.env`
+4. Populate the `REACT_APP_API_URL` variable with mock API URL
+    - Example: `REACT_APP_API_URL=http://localhost:3000`
+5. Build project by running `npm run build`
+
+## Running Mock API
+> **Note**
+> This step is optional if you wish to only update the extension popup without access to the API
+1. Install `json-server` globally by running `npm install -g json-server`
+2. Once installed, you can start the mock API server by running the following command:
+    - `json-server --watch src/mock/db.json`
 
 ## Install Extension Locally
 1. Open Chrome extensions (Chrome -> Click on three dots on the top right -> Extensions -> Manage Extensions)

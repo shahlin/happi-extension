@@ -25,6 +25,8 @@ Lots of inspiration was taken off of a research done by Microsoft, GitHub and Un
 1. Install `json-server` globally by running `npm install -g json-server`
 2. Once installed, you can start the mock API server by running the following command:
     - `json-server --watch src/mock/db.json`
+3. To verify if the mock APIs are working, try accessing the following endpoint:
+    - **GET** `http://localhost:3000/stats/myclientidx/basics`
 
 ## Install Extension Locally
 1. Open Chrome extensions (Chrome -> Click on three dots on the top right -> Extensions -> Manage Extensions)

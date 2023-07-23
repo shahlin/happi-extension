@@ -6,8 +6,10 @@
 
 .OverallWeeklyStatBar,
 .OverallWeeklyStatSingleBar {
+    overflow: hidden;
+    background-color: #D9D9D9;
     width: 100%;
-    height: 13px;
+    height: 14px;
 }
 
 .OverallWeeklyStatBar {
@@ -20,17 +22,14 @@
 
 #OverallWeeklyStatUnhappyBar {
     background-color: #D3374E;
-    border-radius: 10px 0 0 10px;
 }
 
 #OverallWeeklyStatNeutralBar {
     background-color: #FDC70E;
-    border-radius: 0;
 }
 
 #OverallWeeklyStatHappyBar {
     background-color: #2EAF6E;
-    border-radius: 0 10px 10px 0;
 }
 
 #OverallWeeklyStatEmptyBar {

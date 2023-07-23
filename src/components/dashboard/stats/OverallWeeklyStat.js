@@ -28,7 +28,6 @@ function OverallWeeklyStat() {
             setUnhappyPercentage(percentages.unhappy)
             setNeutralPercentage(percentages.neutral)
             setHappyPercentage(percentages.happy)
-            setBlankPercentage((100 - (unhappyPercentage + neutralPercentage + happyPercentage)))
         }
 
         getPercentages()

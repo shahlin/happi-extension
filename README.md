@@ -16,7 +16,7 @@ Lots of inspiration was taken off of a research done by Microsoft, GitHub and Un
 2. Install dependencies by running `npm install` on your terminal
 3. Duplicate the `.env.sample` file and rename it to `.env`
 4. Populate the `REACT_APP_API_URL` variable with mock API URL
-    - Example: `REACT_APP_API_URL=http://localhost:3000`
+    - Example: `REACT_APP_API_URL=http://localhost:7000`
 5. Build project by running `npm run build`
 
 ## Running Mock API
@@ -26,7 +26,7 @@ Lots of inspiration was taken off of a research done by Microsoft, GitHub and Un
 2. Once installed, you can start the mock API server by running the following command:
     - `json-server --port 7000 --watch src/mock/db.json`
 3. To verify if the mock APIs are working, try accessing the following endpoint:
-    - **GET** `http://localhost:3000/stats/myclientidx/basics`
+    - **GET** `http://localhost:7000/stats/myclientidx/basics`
 
 ## Install Extension Locally
 1. Open Chrome extensions (Chrome -> Click on three dots on the top right -> Extensions -> Manage Extensions)

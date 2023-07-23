@@ -32,3 +32,7 @@
     background-color: #2EAF6E;
     border-radius: 0 10px 10px 0;
 }
+
+#OverallWeeklyStatEmptyBar {
+    background-color: #D9D9D9;
+}

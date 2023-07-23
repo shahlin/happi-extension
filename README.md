@@ -24,7 +24,7 @@ Lots of inspiration was taken off of a research done by Microsoft, GitHub and Un
 > This step is optional if you wish to only update the extension popup without access to the API
 1. Install `json-server` globally by running `npm install -g json-server`
 2. Once installed, you can start the mock API server by running the following command:
-    - `json-server --watch src/mock/db.json`
+    - `json-server --port 7000 --watch src/mock/db.json`
 3. To verify if the mock APIs are working, try accessing the following endpoint:
     - **GET** `http://localhost:3000/stats/myclientidx/basics`
 

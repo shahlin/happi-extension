@@ -1,25 +1,25 @@
 import { useEffect, useState } from 'react';
-import { getOverallSatisfactionStats } from '../../../api/stats/OverallSatisfactionStat';
 import './OverallWeeklyStat.css';
 import OverallWeeklyStatsSummary from './OverallWeeklyStatsSummary';
 
 const PERCENTAGE_THRESHOLD_FOR_INSUFFICIENT_DATA_SUMMARY = 40
 
-function OverallWeeklyStat() {
+function OverallWeeklyStat(props) {
     const [unhappyPercentage, setUnhappyPercentage] = useState(0);
     const [neutralPercentage, setNeutralPercentage] = useState(0);
     const [happyPercentage, setHappyPercentage] = useState(0);
 
+    async function handleFetchingStats() {
+        const data = await props.onFetchData();
+        const percentages = getWeeklySatisfactionPercentages(data)
+
+        setUnhappyPercentage(percentages.unhappy)
+        setNeutralPercentage(percentages.neutral)
+        setHappyPercentage(percentages.happy)
+    }
+
     useEffect(() => {
-        const getPercentages = async () => {
-            var percentages = await getWeeklySatisfactionPercentages()
-
-            setUnhappyPercentage(percentages.unhappy)
-            setNeutralPercentage(percentages.neutral)
-            setHappyPercentage(percentages.happy)
-        }
-
-        getPercentages()
+        handleFetchingStats()
     }, [unhappyPercentage, neutralPercentage, happyPercentage])
 
     return (
@@ -34,10 +34,8 @@ function OverallWeeklyStat() {
     );
 }
 
-async function getWeeklySatisfactionPercentages() {
-    var overallSatisfactionStat = await getOverallSatisfactionStats()
-
-    if (Object.keys(overallSatisfactionStat).length === 0) {
+function getWeeklySatisfactionPercentages(data) {
+    if (data == null || Object.keys(data).length === 0) {
         return {
             "unhappy": 0,
             "neutral": 0,
@@ -45,7 +43,7 @@ async function getWeeklySatisfactionPercentages() {
         }
     }
 
-    return overallSatisfactionStat.weekly
+    return data.weekly
 }
 
 function getWeeklySatisfactionSummary(unhappyPercentage, neutralPercentage, happyPercentage) {

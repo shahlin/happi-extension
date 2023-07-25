@@ -10,7 +10,7 @@ function OverallWeeklyStat(props) {
     const [happyPercentage, setHappyPercentage] = useState(0);
 
     async function handleFetchingStats() {
-        const data = await props.onFetchData();
+        const data = await props.data;
         const percentages = getWeeklySatisfactionPercentages(data)
 
         setUnhappyPercentage(percentages.unhappy)

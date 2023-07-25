@@ -1,16 +1,27 @@
-import { Pie, PieChart, Cell } from "recharts";
+import { Pie, PieChart, Cell, Sector, Label } from "recharts";
 import BasicStatCard from "../BasicStatCard";
 import './SleepQualityStat.css'
+import { useEffect, useState } from "react";
 
-const data = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-];
+var COLORS = ['#D3374E', '#FDC70E', '#2EAF6E', '#D9D9D9'];
 
-const COLORS = ['#D3374E', '#FDC70E', '#2EAF6E'];
+function SleepQualityStat(props) {
 
-function SleepQualityStat() {
+    const [stats, setStats] = useState([]);
+    const [sleepQualityLabelText, setSleepQualityLabelText] = useState("");
+
+    async function handleFetchingStats() {
+        const data = await props.data;
+        const stats = getSleepQualityStats(data)
+
+        setStats(stats)
+        setSleepQualityLabelText(getSleepQualityLabelText(data))
+    }
+
+    useEffect(() => {
+        handleFetchingStats()
+    }, [stats, sleepQualityLabelText])
+
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
@@ -19,7 +30,7 @@ function SleepQualityStat() {
             <div className="BasicStatChart">
                 <PieChart width={350} height={200}>
                     <Pie
-                        data={data}
+                        data={stats}
                         cx={180}
                         cy={95}
                         innerRadius={60}
@@ -27,7 +38,8 @@ function SleepQualityStat() {
                         fill="#8884d8"
                         dataKey="value"
                     >
-                        {data.map((entry, index) => (
+                        <Label value={sleepQualityLabelText} position="center" fontSize={"40px"} />
+                        {stats.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                     </Pie>
@@ -35,6 +47,52 @@ function SleepQualityStat() {
             </div>
         </BasicStatCard>
     );
+}
+
+function getSleepQualityStats(data) {
+    if (data == null || Object.keys(data).length === 0) {
+        return []
+    }
+
+    const sleepQuality = data.sleep_quality
+
+    if (sleepQuality.good === 0 && sleepQuality.average === 0 && sleepQuality.bad === 0) {
+        COLORS[0] = COLORS[3]
+        return [
+            { name: 'Insufficient Data', value: 100 },
+        ]
+    }
+
+    return [
+        { name: 'Bad', value: sleepQuality.bad },
+        { name: 'Average', value: sleepQuality.average },
+        { name: 'Good', value: sleepQuality.good },
+    ]
+}
+
+function getSleepQualityLabelText(data) {
+    if (data == null || Object.keys(data).length === 0) {
+        return "😶"
+    }
+
+    const sleepQuality = data.sleep_quality
+
+    if (sleepQuality.bad > sleepQuality.average && sleepQuality.bad > sleepQuality.good) {
+        // Max Bad
+        return "😰"
+    }
+
+    if (sleepQuality.average > sleepQuality.bad && sleepQuality.average > sleepQuality.good) {
+        // Max Average
+        return "😅"
+    }
+
+    if (sleepQuality.good > sleepQuality.bad && sleepQuality.good > sleepQuality.average) {
+        // Max Good
+        return "🥳"
+    }
+
+    return "😶"
 }
 
 export default SleepQualityStat;

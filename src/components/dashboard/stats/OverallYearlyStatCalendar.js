@@ -14,7 +14,7 @@ function OverallYearlyStatCalendar(props) {
     const [dailyData, setDailyData] = useState([])
 
     async function handleFetchingStats() {
-        const data = await props.onFetchData();
+        const data = await props.data;
 
         setDailyData(getRemappedDailySatisfactionData(data))
     }

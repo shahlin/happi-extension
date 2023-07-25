@@ -5,7 +5,7 @@
             "neutral": 50,
             "happy": 40
         },
-        "yearly": [
+        "daily": [
             {
                 "date": "2023-01-01",
                 "value": "UNHAPPY"

@@ -37,6 +37,7 @@ function SleepQualityStat(props) {
                         outerRadius={85}
                         fill="#8884d8"
                         dataKey="value"
+                        style={{ outline: 'none' }}
                     >
                         <Label value={sleepQualityLabelText} position="center" fontSize={"40px"} />
                         {stats.map((entry, index) => (

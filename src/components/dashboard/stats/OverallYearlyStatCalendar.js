@@ -1,6 +1,13 @@
 import { ResponsiveCalendar } from '@nivo/calendar'
 import './OverallYearlyStatCalendar.css';
 import { useEffect, useState } from 'react';
+import { getDatesBetween, getEndDateOfYear, getStartDateOfYear, getYearMonthDayFormattedDate } from '../../../utils/TimeUtils';
+
+// Workaround
+const UNHAPPY_DATAPOINTS_COUNT = 1000
+const NEUTRAL_DATAPOINTS_COUNT = 2000
+const HAPPY_DATAPOINTS_COUNT = 3000
+const FUTURE_DATE_DATAPOINTS_COUNT = 4000
 
 function OverallYearlyStatCalendar(props) {
 
@@ -23,9 +30,10 @@ function OverallYearlyStatCalendar(props) {
             </div>
             <ResponsiveCalendar
                 data={dailyData}
-                from={getStartOfYear()}
-                to={getEndOfYear()}
+                from={getStartDateOfYear()}
+                to={getEndDateOfYear()}
                 tooltip={({ day, value, color }) => (
+                    (value < FUTURE_DATE_DATAPOINTS_COUNT) &&
                     <div style={{
                         backgroundColor: 'rgba(100, 100, 100, 0.8)',
                         padding: '6px 10px',
@@ -35,10 +43,9 @@ function OverallYearlyStatCalendar(props) {
                     }}>
                         {day}
                     </div>
-                )
-                }
+                )}
                 emptyColor="#D9D9D9"
-                colors={['#61CDBB', '#D3374E', '#FDC70E', '#F1F1F1']}
+                colors={['#D3374E', '#FDC70E', '#61CDBB', '#F1F1F1']}
                 margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
                 yearSpacing={40}
                 monthBorderColor="#ffffff"
@@ -54,57 +61,31 @@ function getRemappedDailySatisfactionData(data) {
         return []
     }
 
+    var unhappyCount = UNHAPPY_DATAPOINTS_COUNT
+    var neutralCount = NEUTRAL_DATAPOINTS_COUNT
+    var happyCount = HAPPY_DATAPOINTS_COUNT
     data.daily.forEach(function (obj) {
         obj.day = obj.date;
         delete obj.date;
 
-        if (obj.value == "UNHAPPY") { obj.value = 1 }
-        if (obj.value == "NEUTRAL") { obj.value = 2 }
-        if (obj.value == "HAPPY") { obj.value = 3 }
+        if (obj.value == "UNHAPPY") { obj.value = unhappyCount += 1 }
+        if (obj.value == "NEUTRAL") { obj.value = neutralCount += 1 }
+        if (obj.value == "HAPPY") { obj.value = happyCount += 1 }
     });
 
     const todaysDate = new Date()
-    const endOfYearDate = new Date(getEndOfYear());
+    const endOfYearDate = new Date(getEndDateOfYear());
     const upcomingDates = getDatesBetween(todaysDate, endOfYearDate)
 
+    var futureDateCount = FUTURE_DATE_DATAPOINTS_COUNT
     upcomingDates.forEach(function (upcomingDate) {
         data.daily.push({
-            day: getFormattedDate(upcomingDate),
-            value: 4
+            day: getYearMonthDayFormattedDate(upcomingDate),
+            value: futureDateCount += 1
         })
     })
 
     return data.daily
 }
 
-function getStartOfYear() { return new Date().getFullYear() + "-01-01" }
-function getEndOfYear() { return new Date().getFullYear() + "-12-31" }
-
-function getDatesBetween(startDate, endDate) {
-    const currentDate = new Date(startDate.getTime());
-    const dates = [];
-    while (currentDate <= endDate) {
-        dates.push(new Date(currentDate));
-        currentDate.setDate(currentDate.getDate() + 1);
-    }
-
-    return dates;
-}
-
-function getFormattedDate(date) {
-    const year = date.toLocaleString('default', { year: 'numeric' });
-    const month = date.toLocaleString('default', { month: '2-digit' });
-    const day = date.toLocaleString('default', { day: '2-digit' });
-
-    return [year, month, day].join('-');
-}
-
 export default OverallYearlyStatCalendar;
-
-/*
-TODO:
-
-1. Upcoming dates shouldn't have tooltips
-2. Remove magic numbers and add constants for the values
-3. Fix green not showing (only 3 colors taken)
-*/

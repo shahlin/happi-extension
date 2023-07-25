@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './OverallWeeklyStat.css';
-import OverallWeeklyStatsSummary from './OverallWeeklyStatsSummary';
+import { summaryTexts } from './OverallWeeklyStatsSummary';
 
 const PERCENTAGE_THRESHOLD_FOR_INSUFFICIENT_DATA_SUMMARY = 40
 
@@ -48,30 +48,30 @@ function getWeeklySatisfactionPercentages(data) {
 
 function getWeeklySatisfactionSummary(unhappyPercentage, neutralPercentage, happyPercentage) {
     if ((unhappyPercentage + neutralPercentage + happyPercentage) < PERCENTAGE_THRESHOLD_FOR_INSUFFICIENT_DATA_SUMMARY) {
-        return OverallWeeklyStatsSummary.insufficient_data
+        return summaryTexts.insufficient_data
     }
 
     if (unhappyPercentage > neutralPercentage && unhappyPercentage > happyPercentage) {
         // Max Unhappy
-        return OverallWeeklyStatsSummary.unhappy
+        return summaryTexts.unhappy
     }
 
     if (neutralPercentage > unhappyPercentage && neutralPercentage > happyPercentage) {
         // Max Neutral
-        return OverallWeeklyStatsSummary.neutral
+        return summaryTexts.neutral
     }
 
     if (happyPercentage > unhappyPercentage && happyPercentage > neutralPercentage) {
         // Max Happy
-        return OverallWeeklyStatsSummary.happy
+        return summaryTexts.happy
     }
 
-    if (unhappyPercentage == neutralPercentage && (unhappyPercentage + neutralPercentage) > happyPercentage) {
+    if (unhappyPercentage === neutralPercentage && (unhappyPercentage + neutralPercentage) > happyPercentage) {
         // Equally unhappy and neutral; Less happy
-        return OverallWeeklyStatsSummary.equal_data_unhappy_neutral
+        return summaryTexts.equal_data_unhappy_neutral
     }
 
-    return OverallWeeklyStatsSummary.equal_data
+    return summaryTexts.equal_data
 }
 
 export default OverallWeeklyStat;

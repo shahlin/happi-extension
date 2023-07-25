@@ -57,7 +57,7 @@ function OverallYearlyStatCalendar(props) {
 }
 
 function getRemappedDailySatisfactionData(data) {
-    if (data == null || data.length == 0 || Object.keys(data).length === 0) {
+    if (data == null || data.length === 0 || Object.keys(data).length === 0) {
         return []
     }
 
@@ -68,9 +68,9 @@ function getRemappedDailySatisfactionData(data) {
         obj.day = obj.date;
         delete obj.date;
 
-        if (obj.value == "UNHAPPY") { obj.value = unhappyCount += 1 }
-        if (obj.value == "NEUTRAL") { obj.value = neutralCount += 1 }
-        if (obj.value == "HAPPY") { obj.value = happyCount += 1 }
+        if (obj.value === "UNHAPPY") { obj.value = unhappyCount += 1 }
+        if (obj.value === "NEUTRAL") { obj.value = neutralCount += 1 }
+        if (obj.value === "HAPPY") { obj.value = happyCount += 1 }
     });
 
     const todaysDate = new Date()

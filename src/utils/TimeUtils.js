@@ -38,7 +38,7 @@ export function dateIsToday(date) {
     // Avoid changing date variable as date is passed by reference
     var copiedDate = new Date(date.getTime());
 
-    if (copiedDate.setHours(0, 0, 0, 0) == (new Date()).setHours(0, 0, 0, 0)) {
+    if (copiedDate.setHours(0, 0, 0, 0) === (new Date()).setHours(0, 0, 0, 0)) {
         return true;
     }
 
@@ -54,7 +54,7 @@ export function getStartDateOfYear() { return new Date().getFullYear() + "-01-01
 export function getEndDateOfYear() { return new Date().getFullYear() + "-12-31" }
 
 export function getDatesBetween(startDate, endDate) {
-    var dateArray = new Array();
+    var dateArray = [];
     var currentDate = startDate;
     while (currentDate <= (endDate.addDays(1))) {
         dateArray.push(new Date(currentDate));

@@ -1,4 +1,4 @@
-export default {
+export const summaryTexts = {
     unhappy: "You have been quite unsatisfied this week, take it easy c:",
     neutral: "The week's going okay so far, one at a time!",
     happy: "Yay, looks like this week has been great so far!",

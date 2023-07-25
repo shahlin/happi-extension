@@ -36,9 +36,9 @@ function OverallProductivityQuestion(props) {
         setShownNeutralAnswer(false);
         setShownHappyAnswer(false);
 
-        if (answer == 'unhappy') { setShownUnhappyAnswer(true); }
-        if (answer == 'neutral') { setShownNeutralAnswer(true); }
-        if (answer == 'happy') { setShownHappyAnswer(true); }
+        if (answer === 'unhappy') { setShownUnhappyAnswer(true); }
+        if (answer === 'neutral') { setShownNeutralAnswer(true); }
+        if (answer === 'happy') { setShownHappyAnswer(true); }
     }
 
     return (

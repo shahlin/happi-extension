@@ -1,4 +1,4 @@
-import { Pie, PieChart, Cell, Sector, Label } from "recharts";
+import { Pie, PieChart, Cell, Label } from "recharts";
 import BasicStatCard from "../BasicStatCard";
 import './SleepQualityStat.css'
 import { useEffect, useState } from "react";

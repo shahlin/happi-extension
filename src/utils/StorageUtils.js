@@ -1,6 +1,12 @@
 /*global chrome*/
 
+import { isDevEnv } from "./EnvUtils";
+
 export function getKeyPromise(key) {
+    if (isDevEnv()) {
+        return null
+    }
+
     return chrome.storage.sync.get(key).then(function (value) {
         return value[key]
     });

@@ -1,0 +1,13 @@
+.FaqPageContent>* {
+    font-weight: lighter;
+}
+
+.FaqPageContent h1 {
+    color: #2EAF6E;
+    margin-bottom: 0;
+}
+
+.FaqSubtitle {
+    font-size: 24px;
+    margin-top: 0;
+}

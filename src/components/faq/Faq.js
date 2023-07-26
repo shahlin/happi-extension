@@ -1,7 +1,7 @@
 import PageContent from './PageContent';
 import Page from '../common/Page';
 
-function Dashboard() {
+function Faq() {
     return (
         <div className='PageContent'>
             <Page pageContent={<PageContent />} />
@@ -9,4 +9,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
+export default Faq;

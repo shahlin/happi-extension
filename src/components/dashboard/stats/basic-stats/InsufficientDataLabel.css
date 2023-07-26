@@ -1,0 +1,9 @@
+.InsufficientDataLabelContainer {
+    width: inherit;
+    font-size: 30px;
+    color: #ccc;
+    font-weight: lighter;
+    position: relative;
+    top: 30px;
+    left: 25px;
+}

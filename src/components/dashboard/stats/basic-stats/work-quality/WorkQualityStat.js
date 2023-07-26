@@ -1,67 +1,76 @@
-import { ResponsiveContainer, LineChart, Line } from "recharts";
+import { XAxis, BarChart, Tooltip, Bar, Cell, YAxis, Label, LabelList } from "recharts";
 import BasicStatCard from "../BasicStatCard";
 import './WorkQualityStat.css'
+import { useEffect, useState } from "react";
+import InsufficientDataText from "../InsufficientDataLabel";
 
-const data = [
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 2290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 2181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 2500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 2100,
-    },
+var COLORS = [
+    'rgba(46, 175, 110, 0.8)', // Green
+    'rgba(253, 199, 14, 0.8)', // Yellow
+    'rgba(255, 228, 134, 0.8)', // Lighter yellow
+    'rgba(211, 55, 78, 0.8)' // Red
 ];
 
-function WorkQualityStat() {
+function WorkQualityStat(props) {
+    const [stats, setStats] = useState([]);
+
+    async function handleFetchingStats() {
+        const data = await props.data;
+        const stats = getWorkQualityStats(data)
+
+        setStats(stats)
+    }
+
+    useEffect(() => {
+        handleFetchingStats()
+    }, [stats])
+
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
                 <h2>Work Quality</h2>
             </div>
-            <div className="BasicStatChart">
-                <ResponsiveContainer width="100%" height="100%">
-                    <LineChart width={350} height={200} data={data}>
-                        <Line dataKey="pv" stroke="#D6D6D6" strokeWidth={2} dot={{ fill: '#6F6F6F', stroke: '#6F6F6F', strokeWidth: 2 }} />
-                    </LineChart>
-                </ResponsiveContainer>
-            </div>
+
+            {
+                (stats.length > 0) ? (
+                    <div className="BasicStatChart">
+                        <BarChart width={350} height={200} margin={{ top: 15 }} data={stats} >
+                            <XAxis dataKey="name" axisLine={false} tickLine={false} />
+                            <Bar barSize={50} dataKey="value" isAnimationActive={false}>
+                                <LabelList style={{ color: 'black' }} dataKey="value" position="top" />
+                                {
+                                    stats.map((entry, index) => (
+                                        <Cell fill={COLORS[index % COLORS.length]} />
+                                    ))
+                                }
+                            </Bar>
+                        </BarChart>
+                    </div>
+                ) : (
+                    <InsufficientDataText />
+                )
+            }
         </BasicStatCard>
     );
+}
+
+function getWorkQualityStats(data) {
+    if (data == null || Object.keys(data).length === 0) {
+        return []
+    }
+
+    const workQuality = data.amount_of_work_done
+
+    if (workQuality.yes === 0 && workQuality.mostly === 0 && workQuality.somewhat === 0 && workQuality.no) {
+        return []
+    }
+
+    return [
+        { name: 'Yes', value: workQuality.yes },
+        { name: 'Mostly', value: workQuality.mostly },
+        { name: 'Somewhat', value: workQuality.somewhat },
+        { name: 'No', value: workQuality.no },
+    ]
 }
 
 export default WorkQualityStat;

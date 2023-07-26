@@ -1,4 +1,4 @@
-import { XAxis, BarChart, Tooltip, Bar, Cell, YAxis, Label, LabelList } from "recharts";
+import { XAxis, BarChart, Bar, Cell, LabelList } from "recharts";
 import BasicStatCard from "../BasicStatCard";
 import './WorkQualityStat.css'
 import { useEffect, useState } from "react";

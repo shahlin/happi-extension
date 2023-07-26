@@ -2,7 +2,7 @@ import { XAxis, BarChart, Tooltip, Bar, Cell, YAxis, Label, LabelList } from "re
 import BasicStatCard from "../BasicStatCard";
 import './WorkQualityStat.css'
 import { useEffect, useState } from "react";
-import InsufficientDataText from "../InsufficientDataLabel";
+import InsufficientDataLabel from "../InsufficientDataLabel";
 
 var COLORS = [
     'rgba(46, 175, 110, 0.8)', // Green
@@ -47,7 +47,7 @@ function WorkQualityStat(props) {
                         </BarChart>
                     </div>
                 ) : (
-                    <InsufficientDataText />
+                    <InsufficientDataLabel />
                 )
             }
         </BasicStatCard>

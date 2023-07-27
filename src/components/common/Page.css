@@ -4,3 +4,21 @@
     display: flex;
     font-family: Dongle;
 }
+
+.InfoPageContent>* {
+    font-weight: lighter;
+}
+
+.InfoPageContent h1 {
+    color: #2EAF6E;
+    margin-bottom: 0;
+}
+
+.InfoPageSubtitle {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.InfoPageContentDataContainer {
+    margin-top: 50px;
+}

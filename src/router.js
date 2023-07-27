@@ -3,6 +3,7 @@ import NotFoundErrorPage from './pages/page-not-found';
 import ExtensionPage from './pages/extension';
 import DashboardPage from './pages/dashboard';
 import FaqPage from './pages/faq';
+import MetricsPage from './pages/metrics';
 
 export default function router() {
     return createHashRouter([
@@ -18,6 +19,10 @@ export default function router() {
         {
             path: "faq",
             element: <FaqPage />,
+        },
+        {
+            path: "metrics",
+            element: <MetricsPage />,
         },
     ]);
 }

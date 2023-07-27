@@ -1,8 +1,8 @@
-import { AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import { useState } from 'react';
+import { AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { QuestionAnswerList } from './QuestionAnswersList';
+import { MetricsList } from './MetricsList';
 import '../common/Page.css'
 
 function PageContent() {
@@ -14,16 +14,15 @@ function PageContent() {
 
     return (
         <div className="InfoPageContent">
-            <h1>Frequently Asked Questions</h1>
-            <p className='InfoPageSubtitle'>Answers for some of the questions you might have. For the ones you can't find, please <u>contact the developer</u>.</p>
+            <h1>Metrics</h1>
+            <p className='InfoPageSubtitle'>Details about the metrics (or questions) used in analyzing your productivity</p>
 
             <div className='InfoPageContentDataContainer'>
                 {
-                    QuestionAnswerList.map((entry, index) => {
+                    MetricsList.map((entry, index) => {
                         return (<Accordion
                             elevation={0}
                             disableGutters={true}
-                            className='FaqDataAccordion'
                             expanded={expanded === ('panel' + index)}
                             onChange={handleChange(('panel' + index))}
                             sx={{

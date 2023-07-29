@@ -7,7 +7,7 @@ function PageContent() {
     return (
         <div className="InfoPageContent">
             <h1>SPACE Framework</h1>
-            <p className='InfoPageSubtitle'>Research by Microsoft, GitHub and University of Victoria</p>
+            <p className='InfoPageSubtitle'>The dimensions Happi tries to integrate to measure productivity</p>
 
             <div className='InfoPageContentDataContainer' style={{ fontSize: '26px' }}>
                 <p>
@@ -29,7 +29,7 @@ function PageContent() {
                 <p className='SpaceFrameworkDimensionSubText'>How well developers and teams can make progress on their work or complete it without interruption or delays. Sometimes we get into this state called Flow where we feel like we're 'in the zone' and highly productive. This dimension tries to measure that. It's how well a developer can get a piece of work done while being efficient and feeling good about the work that they're doing.</p>
 
                 <Divider />
-                <p>To measure developer productivity, you can pick the metrics from different dimensions and measure against those. It is recommended that you pick metrics across at least 3 dimensions to get a better result. The second recommendation is that at least 1 metric must be based on perceptual measure like asking an individual how they felt about the day.</p>
+                <p>To measure developer productivity, you can pick the metrics from different dimensions and measure against those. It is recommended that you pick metrics across at least 3 dimensions to get a better result. The second recommendation is that at least 1 metric must be based on perceptual measure like asking an individual how they felt about the day. <b>Happi</b> tries to use some of these metrics and make it easier for you to measure your productivity.</p>
                 <p>Read about it in detail on my blog post <a href="https://www.shahlin.com/blog/2023/05/measuring-developer-productivity-with-space-framework">Measuring Developer Productivity with SPACE Framework</a></p>
             </div>
         </div >

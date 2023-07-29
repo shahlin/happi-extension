@@ -5,6 +5,7 @@ import DashboardPage from './pages/dashboard';
 import FaqPage from './pages/faq';
 import MetricsPage from './pages/metrics';
 import ContactPage from './pages/contact';
+import SpaceFramework from './components/spaceframework/SpaceFramework';
 
 export default function router() {
     return createHashRouter([
@@ -28,6 +29,10 @@ export default function router() {
         {
             path: "contact",
             element: <ContactPage />,
+        },
+        {
+            path: "space-framework",
+            element: <SpaceFramework />,
         },
     ]);
 }

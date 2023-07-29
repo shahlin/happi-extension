@@ -11,7 +11,7 @@
 
 .InfoPageContent h1 {
     color: #2EAF6E;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .InfoPageContent h2 {
@@ -25,4 +25,8 @@
 
 .InfoPageContentDataContainer {
     margin-top: 50px;
+}
+
+.InfoPageContentDataContainer p>a {
+    color: inherit;
 }

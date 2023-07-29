@@ -1,0 +1,40 @@
+.ContactFindMeOnLink {
+    text-decoration: none;
+}
+
+.ContactFindMeOnCard:hover {
+    cursor: pointer;
+    background-color: #EEEEEE;
+}
+
+.InfoPageContentDataContainer h2 {
+    margin-bottom: 5px;
+}
+
+.InfoPageContentDataContainer .MuiCardContent-root h3 {
+    font-family: 'Dongle';
+    font-size: 30px;
+}
+
+.InfoPageContentDataContainer .MuiCardContent-root p {
+    color: #303030;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.ContactFindMeOnIconContainer {
+    height: 70px;
+}
+
+.ContactFindMeOnIcon {
+    width: 26px;
+    float: right;
+}
+
+.ContactReadMoreInfoContainer p {
+    font-size: 24px;
+}
+
+.ContactReadMoreInfoContainer a:visited {
+    color: inherit;
+}

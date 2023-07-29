@@ -21,6 +21,6 @@ export const QuestionAnswerList = [
     },
     {
         question: "What is the meaning or importance of each of the questions?",
-        answer: "Each question (or metric) is trying to measure some specific dimension that leads to you being productive (or not). The metrics can be used in conjunction with one another to give you an idea about your productivity. The charts and graphs on your dashboard are the result of measuring these different metrics. To understand each question in detail, please head over to the [Metrics](https://www.shahlin.com) page."
+        answer: "Each question (or metric) is trying to measure some specific dimension that leads to you being productive (or not). The metrics can be used in conjunction with one another to give you an idea about your productivity. The charts and graphs on your dashboard are the result of measuring these different metrics. To understand each question in detail, please head over to the <a href='/#/metrics'>Metrics</a> page."
     },
 ]

@@ -11,7 +11,7 @@ function PageContent() {
 
             <div className='InfoPageContentDataContainer' style={{ fontSize: '26px' }}>
                 <p>
-                    A group of individuals from <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, <a href="https://github.com/">Github</a> and <a href="https://www.uvic.ca/ecs/software/research/">University of Victoria</a> came together to identify metrics that can measure developer productivity with a holistic approach and not just based on developer activity alone. They divided the measures into 5 dimensions abbreviated as <em><strong>SPACE</strong></em> as shown above. Each of the dimension has been explained briefly to give you a sense of the framework and how it can be used to measure developer productivity.
+                    A group of individuals from <a target="_blank" href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, <a target="_blank" href="https://github.com/">Github</a> and <a target="_blank" href="https://www.uvic.ca/ecs/software/research/">University of Victoria</a> came together to identify metrics that can measure developer productivity with a holistic approach and not just based on developer activity alone. They divided the measures into 5 dimensions abbreviated as <em><strong>SPACE</strong></em> as shown above. Each of the dimension has been explained briefly to give you a sense of the framework and how it can be used to measure developer productivity.
                 </p>
                 <h3 className='SpaceFrameworkDimensionTitle'>Satisfaction and well-being</h3>
                 <p className='SpaceFrameworkDimensionSubText'>Satisfaction refers to how fulfilled developers feel with their work, team, culture or tools. Well-being, on the other hand, refers to how healthy and happy they are.</p>
@@ -30,7 +30,7 @@ function PageContent() {
 
                 <Divider />
                 <p>To measure developer productivity, you can pick the metrics from different dimensions and measure against those. It is recommended that you pick metrics across at least 3 dimensions to get a better result. The second recommendation is that at least 1 metric must be based on perceptual measure like asking an individual how they felt about the day. <b>Happi</b> tries to use some of these metrics and make it easier for you to measure your productivity.</p>
-                <p>Read about it in detail on my blog post <a href="https://www.shahlin.com/blog/2023/05/measuring-developer-productivity-with-space-framework">Measuring Developer Productivity with SPACE Framework</a></p>
+                <p>Read about it in detail on my blog post <a target='_blank' href="https://www.shahlin.com/blog/2023/05/measuring-developer-productivity-with-space-framework">Measuring Developer Productivity with SPACE Framework</a></p>
             </div>
         </div >
     );

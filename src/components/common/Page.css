@@ -12,10 +12,11 @@
 .InfoPageContent h1 {
     color: #2EAF6E;
     margin: 0;
+    font-size: 32px;
 }
 
 .InfoPageContent h2 {
-    font-size: 1.8em;
+    font-size: 29px;
 }
 
 .InfoPageSubtitle {
@@ -25,8 +26,4 @@
 
 .InfoPageContentDataContainer {
     margin-top: 50px;
-}
-
-.InfoPageContentDataContainer p>a {
-    color: inherit;
 }

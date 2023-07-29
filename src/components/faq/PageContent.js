@@ -15,7 +15,7 @@ function PageContent() {
     return (
         <div className="InfoPageContent">
             <h1>Frequently Asked Questions</h1>
-            <p className='InfoPageSubtitle'>Answers for some of the questions you might have. For the ones you can't find, please <u>contact the developer</u>.</p>
+            <p className='InfoPageSubtitle'>Answers for some of the questions you might have. For the ones you can't find, please <a href="/#/contact">contact the developer</a>.</p>
 
             <div className='InfoPageContentDataContainer'>
                 {
@@ -47,7 +47,7 @@ function PageContent() {
                                     fontWeight: 'lighter',
                                     lineHeight: 1.2,
                                 }}>
-                                    {entry.answer}
+                                    <span className='FaqAnswerText' dangerouslySetInnerHTML={{ __html: entry.answer }}></span>
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>)

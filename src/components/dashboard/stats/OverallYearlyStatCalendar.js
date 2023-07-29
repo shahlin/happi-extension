@@ -13,15 +13,12 @@ function OverallYearlyStatCalendar(props) {
 
     const [dailyData, setDailyData] = useState([])
 
-    async function handleFetchingStats() {
-        const data = await props.data;
-
-        setDailyData(getRemappedDailySatisfactionData(data))
-    }
-
     useEffect(() => {
-        handleFetchingStats()
-    }, [dailyData])
+        const data = props.data;
+        const remappedSatisfactionData = getRemappedDailySatisfactionData(data)
+
+        setDailyData(remappedSatisfactionData)
+    }, [props.data])
 
     return (
         <div className='OverallYearlyStatCalendar'>

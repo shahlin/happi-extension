@@ -14,16 +14,11 @@ var COLORS = [
 function WorkQualityStat(props) {
     const [stats, setStats] = useState([]);
 
-    async function handleFetchingStats() {
-        const data = await props.data;
-        const stats = getWorkQualityStats(data)
-
-        setStats(stats)
-    }
-
     useEffect(() => {
-        handleFetchingStats()
-    }, [stats])
+        const data = props.data;
+        const stats = getWorkQualityStats(data)
+        setStats(stats)
+    }, [props.data])
 
     return (
         <BasicStatCard>

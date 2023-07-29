@@ -10,10 +10,11 @@ function BasicStats() {
 
     useEffect(() => {
         async function getStats() {
-            return await getBasicStats()
+            let basicStats = await getBasicStats()
+            setStats(basicStats)
         }
 
-        setStats(getStats())
+        getStats()
     }, [])
 
     return (

@@ -9,18 +9,14 @@ function OverallWeeklyStat(props) {
     const [neutralPercentage, setNeutralPercentage] = useState(0);
     const [happyPercentage, setHappyPercentage] = useState(0);
 
-    async function handleFetchingStats() {
-        const data = await props.data;
+    useEffect(() => {
+        const data = props.data;
         const percentages = getWeeklySatisfactionPercentages(data)
 
         setUnhappyPercentage(percentages.unhappy)
         setNeutralPercentage(percentages.neutral)
         setHappyPercentage(percentages.happy)
-    }
-
-    useEffect(() => {
-        handleFetchingStats()
-    }, [unhappyPercentage, neutralPercentage, happyPercentage])
+    }, [props.data])
 
     return (
         <div className='OverallWeeklyStat'>

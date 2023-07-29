@@ -10,10 +10,11 @@ function PageContent() {
 
     useEffect(() => {
         async function getStats() {
-            return await getOverallSatisfactionStats()
+            let satisfactionStats = await getOverallSatisfactionStats()
+            setStats(satisfactionStats)
         }
 
-        setStats(getStats())
+        getStats()
     }, [])
 
     return (

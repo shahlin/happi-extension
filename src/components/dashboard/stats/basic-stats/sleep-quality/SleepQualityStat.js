@@ -11,24 +11,18 @@ function SleepQualityStat(props) {
     const [stats, setStats] = useState([]);
     const [sleepQualityLabelText, setSleepQualityLabelText] = useState("");
 
-    async function handleFetchingStats() {
-        const data = await props.data;
+    useEffect(() => {
+        const data = props.data;
         const stats = getSleepQualityStats(data)
-
         setStats(stats)
         setSleepQualityLabelText(getSleepQualityLabelText(data))
-    }
-
-    useEffect(() => {
-        handleFetchingStats()
-    }, [stats, sleepQualityLabelText])
+    }, [props.data])
 
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
                 <h2>Sleep Quality</h2>
             </div>
-
 
             {
                 (stats.length > 0) ? (

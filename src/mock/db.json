@@ -1,4 +1,22 @@
 {
+    "answers": {
+        "client_id": "my-client-id",
+        "client_email": "shahlin@shahlin.com",
+        "answer": {
+            "overall_productivity": "UNHAPPY",
+            "productive_time_of_day": "AFTERNOON",
+            "distractions_frequency": "YES",
+            "worked_with_others_frequency": "YES",
+            "interruptions_frequency": "MOSTLY",
+            "amount_of_work_done": "MOSTLY",
+            "high_quality_work_done": "MOSTLY",
+            "breaks_frequency": "MOSTLY",
+            "sleep_quality": "GOOD"
+        },
+        "system_date": "2023-07-30",
+        "system_time": "18:12:09",
+        "timezone": "Asia/Dubai"
+    },
     "overall-satisfaction": {
         "weekly": {
             "unhappy": 10,

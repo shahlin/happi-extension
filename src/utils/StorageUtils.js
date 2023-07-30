@@ -13,9 +13,17 @@ export function getKeyPromise(key) {
 }
 
 export function storeKey(key, value) {
+    if (isDevEnv()) {
+        return null
+    }
+
     chrome.storage.sync.set({ [key]: value });
 }
 
 export function remove(key) {
+    if (isDevEnv()) {
+        return null
+    }
+
     chrome.storage.sync.remove(key);
 }

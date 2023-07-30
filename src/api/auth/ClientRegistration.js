@@ -1,12 +1,12 @@
 import { generateUniqueToken, getEmailPromise } from "../../utils/AuthUtils";
 import { CLIENT_EMAIL_STORAGE_KEY, CLIENT_ID_STORAGE_KEY } from "../../utils/Constants";
+import { isDevEnv } from "../../utils/EnvUtils";
 import { getKeyPromise, storeKey } from "../../utils/StorageUtils";
 import { getSystemTimezone } from "../../utils/TimeUtils";
 
 export async function registerUserIfNotExists() {
     const clientId = await getKeyPromise(CLIENT_ID_STORAGE_KEY);
-
-    if (clientId) {
+    if (clientId || isDevEnv()) {
         return
     }
 

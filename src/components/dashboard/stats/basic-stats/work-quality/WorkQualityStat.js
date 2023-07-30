@@ -56,7 +56,7 @@ function getWorkQualityStats(data) {
 
     const workQuality = data.amount_of_work_done
 
-    if (workQuality.yes === 0 && workQuality.mostly === 0 && workQuality.somewhat === 0 && workQuality.no) {
+    if (workQuality.yes === 0 && workQuality.mostly === 0 && workQuality.somewhat === 0 && workQuality.no === 0) {
         return []
     }
 

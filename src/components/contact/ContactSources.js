@@ -7,7 +7,7 @@ export const contactSources = [
     },
     {
         title: "GitHub",
-        subTitle: "Find the code behind this extension, create an issue, fork it, star it",
+        subTitle: "Find the code behind this extension, create an issue, fork it, star it, sponsor it",
         link: "https://github.com/shahlin/happi-extension",
         img: "/github.png"
     },

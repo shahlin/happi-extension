@@ -1,6 +1,7 @@
 import '../common/Page.css'
 import { Card, CardContent, Grid, Typography } from '@mui/material';
 import { contactSources } from './ContactSources';
+import { NavLink } from 'react-router-dom';
 
 const cardSx = {
     width: '250px',
@@ -45,7 +46,7 @@ function PageContent() {
                 </Grid>
                 <div className='ContactReadMoreInfoContainer'>
                     <p>
-                        Please consider reading the FAQ if you're having any questions about the usage of <b>Happi</b> & if you're wondering what the questions you record every day mean, head over to <a href="/#/metrics">Metrics</a>.
+                        Please consider reading the FAQ if you're having any questions about the usage of <b>Happi</b> & if you're wondering what the questions you record every day mean, head over to <NavLink to="/metrics">Metrics</NavLink>.
                     </p>
                 </div>
             </div>

@@ -10,19 +10,19 @@ var COLORS = [
     'rgba(211, 55, 78, 0.8)' // Red
 ];
 
-function WorkQualityStat(props) {
+function DistractionsFrequencyStat(props) {
     const [stats, setStats] = useState([]);
 
     useEffect(() => {
         const data = props.data;
-        const stats = getWorkQualityStats(data)
+        const stats = getDistractionsFrequencyStats(data)
         setStats(stats)
     }, [props.data])
 
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
-                <h2>Work Quality</h2>
+                <h2>Distractions Frequency</h2>
             </div>
 
             {
@@ -48,23 +48,23 @@ function WorkQualityStat(props) {
     );
 }
 
-function getWorkQualityStats(data) {
+function getDistractionsFrequencyStats(data) {
     if (data == null || Object.keys(data).length === 0) {
         return []
     }
 
-    const workQuality = data.amount_of_work_done
+    const distractionsFrequency = data.distractions_frequency
 
-    if (workQuality.yes === 0 && workQuality.mostly === 0 && workQuality.somewhat === 0 && workQuality.no === 0) {
+    if (distractionsFrequency.yes === 0 && distractionsFrequency.mostly === 0 && distractionsFrequency.somewhat === 0 && distractionsFrequency.no === 0) {
         return []
     }
 
     return [
-        { name: 'Yes', value: workQuality.yes },
-        { name: 'Mostly', value: workQuality.mostly },
-        { name: 'Somewhat', value: workQuality.somewhat },
-        { name: 'No', value: workQuality.no },
+        { name: 'Yes', value: distractionsFrequency.yes },
+        { name: 'Mostly', value: distractionsFrequency.mostly },
+        { name: 'Somewhat', value: distractionsFrequency.somewhat },
+        { name: 'No', value: distractionsFrequency.no },
     ]
 }
 
-export default WorkQualityStat;
+export default DistractionsFrequencyStat;

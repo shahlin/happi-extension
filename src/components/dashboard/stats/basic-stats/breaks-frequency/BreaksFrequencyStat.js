@@ -29,11 +29,10 @@ function BreaksFrequencyStat(props) {
             {
                 (stats.length > 0) ? (
                     <div className="BasicStatChart">
-                        <PieChart width={330} height={188}>
+                        <PieChart width={330} height={195}>
                             <Pie
                                 data={stats}
                                 cy={95}
-
                                 fill="#8884d8"
                                 dataKey="value"
                                 style={{ outline: 'none' }}
@@ -64,12 +63,32 @@ function getBreaksFrequencyStats(data) {
         return []
     }
 
-    return [
+    var stats = [
         { name: 'Yes', value: breaksFrequency.yes },
         { name: 'Mostly', value: breaksFrequency.mostly },
         { name: 'Somewhat', value: breaksFrequency.somewhat },
         { name: 'No', value: breaksFrequency.no },
     ]
+
+    var colorsToRemove = []
+    stats = stats.filter((stat, index) => {
+        if (stat.value === 0) {
+            colorsToRemove.push(index)
+            return false
+        }
+
+        return true;
+    })
+
+    COLORS = COLORS.filter((color, index) => {
+        if (colorsToRemove.includes(index)) {
+            return false;
+        }
+
+        return true
+    })
+
+    return stats
 }
 
 export default BreaksFrequencyStat;

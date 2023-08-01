@@ -7,3 +7,7 @@
     box-shadow: 0 3px #F8F8F8;
     margin-bottom: 30px;
 }
+
+.recharts-wrapper>svg>g {
+    outline: none !important;
+}

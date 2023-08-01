@@ -71,10 +71,10 @@
             "no": 60
         },
         "breaks_frequency": {
-            "yes": 30,
-            "mostly": 20,
-            "somewhat": 10,
-            "no": 40
+            "yes": 0,
+            "mostly": 60,
+            "somewhat": 20,
+            "no": 10
         },
         "interruptions_frequency": {
             "yes": 30,

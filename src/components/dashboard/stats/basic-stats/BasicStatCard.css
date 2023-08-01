@@ -1,9 +1,9 @@
 .BasicStatCard {
-    height: 260px;
-    width: 350px;
+    height: 250px;
+    width: 330px;
     border: 1px solid #F8F8F8;
     padding: 10px 25px;
     border-radius: 10px;
     box-shadow: 0 3px #F8F8F8;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }

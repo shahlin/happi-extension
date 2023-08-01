@@ -26,10 +26,9 @@ function SleepQualityStat(props) {
             {
                 (stats.length > 0) ? (
                     <div className="BasicStatChart">
-                        <PieChart width={350} height={200}>
+                        <PieChart width={330} height={185}>
                             <Pie
                                 data={stats}
-                                cx={180}
                                 cy={95}
                                 innerRadius={60}
                                 outerRadius={85}

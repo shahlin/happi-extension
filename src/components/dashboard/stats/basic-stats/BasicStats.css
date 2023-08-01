@@ -1,10 +1,5 @@
 .BasicStats {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.BasicStatChart {
-    width: 350px;
-    height: 200px;
 }

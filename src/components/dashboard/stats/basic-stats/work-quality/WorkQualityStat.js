@@ -28,7 +28,7 @@ function WorkQualityStat(props) {
             {
                 (stats.length > 0) ? (
                     <div className="BasicStatChart">
-                        <BarChart width={350} height={200} margin={{ top: 15 }} data={stats} >
+                        <BarChart width={330} height={185} margin={{ top: 15 }} data={stats} >
                             <XAxis dataKey="name" fontSize={'20px'} axisLine={false} tickLine={false} />
                             <Bar barSize={50} dataKey="value" isAnimationActive={false}>
                                 <LabelList fontSize={'18px'} style={{ color: 'black' }} dataKey="value" position="top" />

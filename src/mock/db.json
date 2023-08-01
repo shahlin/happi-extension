@@ -65,10 +65,10 @@
             "average": 50
         },
         "distractions_frequency": {
-            "yes": 0,
-            "mostly": 30,
-            "somewhat": 10,
-            "no": 60
+            "yes": 10,
+            "mostly": 60,
+            "somewhat": 30,
+            "no": 0
         },
         "breaks_frequency": {
             "yes": 0,

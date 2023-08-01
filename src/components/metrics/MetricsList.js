@@ -16,7 +16,7 @@ export const MetricsList = [
         answer: "How often did you connect with other colleagues? This could be for some help you're asking for, a formal chat, a meeting to discuss something, or anything that includes work and humans! This helps us identify and track the Communication/Collaboration dimension better."
     },
     {
-        question: "Were your interrupted during work?",
+        question: "Were you interrupted during work?",
         answer: "Interruptions can be in many forms. It could be as simple as a call while you're hard at work, someone breaking your flow state or ironically, even work meetings."
     },
     {

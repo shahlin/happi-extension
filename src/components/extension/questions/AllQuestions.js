@@ -20,7 +20,7 @@ function Questions(props) {
             <Divider sx={{ marginBottom: '15px' }} variant="middle" />
             <GenericQuestion question="Were you distracted?" qkey="distractions_frequency" onAnswerChange={handleAnswerChange} />
             <GenericQuestion question="Did you work with other people?" qkey="worked_with_others_frequency" onAnswerChange={handleAnswerChange} />
-            <GenericQuestion question="Were your interrupted during work?" qkey="interruptions_frequency" onAnswerChange={handleAnswerChange} />
+            <GenericQuestion question="Were you interrupted during work?" qkey="interruptions_frequency" onAnswerChange={handleAnswerChange} />
             <GenericQuestion question="Did you do a lot of work?" qkey="amount_of_work_done" onAnswerChange={handleAnswerChange} />
             <GenericQuestion question="Did you do high quality work?" qkey="high_quality_work_done" onAnswerChange={handleAnswerChange} />
             <GenericQuestion question="Did you take enough breaks?" qkey="breaks_frequency" onAnswerChange={handleAnswerChange} />

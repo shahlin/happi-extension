@@ -1,3 +1,4 @@
+/* Media query for .PageContent defined below */
 .PageContent {
     width: 75%;
     margin: 0 auto;
@@ -26,4 +27,10 @@
 
 .InfoPageContentDataContainer {
     margin-top: 50px;
+}
+
+@media screen and (max-width: 1500px) {
+    .PageContent {
+        width: 100%;
+    }
 }

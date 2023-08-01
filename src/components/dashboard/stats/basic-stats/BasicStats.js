@@ -4,6 +4,7 @@ import './BasicStats.css'
 import SleepQualityStat from './sleep-quality/SleepQualityStat';
 import WorkQualityStat from './work-quality/WorkQualityStat';
 import DistractionsFrequencyStat from './distractions-frequency/DistractionsFrequencyStat';
+import BreaksFrequencyStat from './breaks-frequency/BreaksFrequencyStat';
 
 function BasicStats() {
 
@@ -23,6 +24,7 @@ function BasicStats() {
             <SleepQualityStat data={stats} />
             <WorkQualityStat data={stats} />
             <DistractionsFrequencyStat data={stats} />
+            <BreaksFrequencyStat data={stats} />
         </div>
     );
 }

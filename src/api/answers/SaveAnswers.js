@@ -1,21 +1,17 @@
-import { CLIENT_ID_STORAGE_KEY, CLIENT_EMAIL_STORAGE_KEY } from "./Constants";
-import { getKeyPromise } from './StorageUtils'
-import { getCurrentSystemDate, getCurrentSystemTime, getSystemTimezone } from './TimeUtils'
+import { CLIENT_EMAIL_STORAGE_KEY, CLIENT_ID_STORAGE_KEY } from "../../utils/Constants";
+import { getKeyPromise } from "../../utils/StorageUtils";
+import { getCurrentSystemDate, getCurrentSystemTime, getSystemTimezone } from "../../utils/TimeUtils";
 
-export async function callStoreAnswersAPI(answers) {
+export async function saveAnswers(answers) {
     const clientId = await getKeyPromise(CLIENT_ID_STORAGE_KEY);
     const clientEmail = await getKeyPromise(CLIENT_EMAIL_STORAGE_KEY);
 
-    await fetch(process.env.REACT_APP_API_URL + '/answers/', {
+    return fetch(process.env.REACT_APP_API_URL + '/answers/', {
         method: 'POST',
         body: JSON.stringify(buildStoreAnswerRequest(clientId, clientEmail, answers)),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
-    }).then((response) => {
-        return Promise.resolve()
-    }).catch((error) => {
-        return Promise.reject(error);
     });
 }
 

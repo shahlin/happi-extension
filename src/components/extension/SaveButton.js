@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CheckIcon from '@mui/icons-material/Check';
-import { callStoreAnswersAPI } from '../../utils/ApiUtils';
 import {
     TOTAL_QUESTIONS_COUNT,
     LAST_SYNCED_AT_STORAGE_KEY,
@@ -11,6 +10,7 @@ import {
 import { getKeyPromise, storeKey } from '../../utils/StorageUtils'
 import { getCurrentTimestamp, minutesPassedSince } from '../../utils/TimeUtils'
 import './SaveButton.css';
+import { saveAnswers } from '../../api/answers/SaveAnswers';
 
 function SaveButton(props) {
     const [isLoading, setLoading] = useState(false);
@@ -30,12 +30,14 @@ function SaveButton(props) {
     function performSave() {
         setLoading(true);
 
-        callStoreAnswersAPI(props.answers).then((result) => {
-            storeKey(SELECTED_ANSWERS_STORAGE_KEY, props.answers);
-            storeKey(LAST_SYNCED_AT_STORAGE_KEY, getCurrentTimestamp());
-            props.setSuccessStatus(true);
-        }).catch((error) => {
-            props.setSuccessStatus(false);
+        saveAnswers(props.answers).then((response) => {
+            if (response.status === 200) {
+                storeKey(SELECTED_ANSWERS_STORAGE_KEY, props.answers);
+                storeKey(LAST_SYNCED_AT_STORAGE_KEY, getCurrentTimestamp());
+                props.setSuccessStatus(true);
+            } else {
+                props.setSuccessStatus(false);
+            }
         }).finally(() => {
             props.setShowStatusAlert(true);
             setLoading(false);

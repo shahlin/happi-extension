@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import InsufficientDataLabel from "../InsufficientDataLabel";
 
 var COLORS = [
-    'rgba(46, 175, 110, 0.8)', // Green
-    'rgba(253, 199, 14, 0.8)', // Yellow
+    'rgba(211, 55, 78, 0.8)', // Red
     'rgba(255, 228, 134, 0.8)', // Lighter yellow
-    'rgba(211, 55, 78, 0.8)' // Red
+    'rgba(253, 199, 14, 0.8)', // Yellow
+    'rgba(46, 175, 110, 0.8)', // Green
 ];
 
 function DistractionsFrequencyStat(props) {

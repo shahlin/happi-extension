@@ -87,6 +87,12 @@
             "mostly": 20,
             "somewhat": 10,
             "no": 40
+        },
+        "high_quality_work_done": {
+            "yes": 20,
+            "mostly": 40,
+            "somewhat": 10,
+            "no": 30
         }
     }
 }

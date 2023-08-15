@@ -53,17 +53,17 @@ function getWorkQualityStats(data) {
         return []
     }
 
-    const workQuality = data.amount_of_work_done
+    const workQuality = data.high_quality_work_done
 
     if (workQuality.yes === 0 && workQuality.mostly === 0 && workQuality.somewhat === 0 && workQuality.no === 0) {
         return []
     }
 
     return [
-        { name: 'Yes', value: workQuality.yes },
-        { name: 'Mostly', value: workQuality.mostly },
-        { name: 'Somewhat', value: workQuality.somewhat },
-        { name: 'No', value: workQuality.no },
+        { name: 'Great', value: workQuality.yes },
+        { name: 'Good', value: workQuality.mostly },
+        { name: 'Average', value: workQuality.somewhat },
+        { name: 'Bad', value: workQuality.no },
     ]
 }
 

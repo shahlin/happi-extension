@@ -1,7 +1,7 @@
 {
     "name": "Happi",
     "description": "Track your daily developer productivity",
-    "version": "1.1.9",
+    "version": "1.1.10",
     "manifest_version": 3,
     "author": "Shahlin Ibrahim",
     "icons": {
@@ -13,9 +13,15 @@
     "permissions": [
         "identity",
         "identity.email",
-        "storage"
+        "storage",
+        "alarms",
+        "notifications"
     ],
     "action": {
         "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "js/alarm.js",
+        "type": "module"
     }
 }

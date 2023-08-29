@@ -5,7 +5,13 @@
 }
 
 .DashboardStatHeader h2 {
-    font-size: 35px;
+    font-size: 37px;
     font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.DashboardStatHeader h3 {
+    font-size: 30px;
+    font-weight: 100;
     margin: 0;
 }

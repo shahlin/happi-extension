@@ -20,7 +20,7 @@ function SleepQualityStat(props) {
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
-                <h2>Sleep Quality</h2>
+                <h3>Sleep Quality</h3>
             </div>
 
             {

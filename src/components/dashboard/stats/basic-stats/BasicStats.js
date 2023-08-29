@@ -20,12 +20,19 @@ function BasicStats() {
     }, [])
 
     return (
-        <div className="BasicStats">
-            <SleepQualityStat data={stats} />
-            <WorkQualityStat data={stats} />
-            <DistractionsFrequencyStat data={stats} />
-            <BreaksFrequencyStat data={stats} />
-        </div>
+        <>
+            <div className='DashboardStatHeader'>
+                <h2>Basics</h2>
+            </div>
+
+            <div className="BasicStats">
+                <SleepQualityStat data={stats} />
+                <WorkQualityStat data={stats} />
+                <DistractionsFrequencyStat data={stats} />
+                <BreaksFrequencyStat data={stats} />
+            </div>
+        </>
+
     );
 }
 

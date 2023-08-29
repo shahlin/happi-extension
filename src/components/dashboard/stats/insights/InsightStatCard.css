@@ -1,0 +1,7 @@
+.InsightStatCard {
+    height: 180px;
+    width: 330px;
+    border-radius: 10px;
+    box-shadow: 0 3px #F8F8F8;
+    margin-bottom: 30px;
+}

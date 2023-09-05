@@ -14,7 +14,7 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
 
     chrome.alarms.create('user-enter-data-alarm', {
         periodInMinutes: 1440, // 24 hours in minutes
-        when: notifyAt.getMilliseconds()
+        when: notifyAt.getTime()
     });
 });
 

@@ -22,7 +22,7 @@ function WorkQualityStat(props) {
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
-                <h2>Work Quality</h2>
+                <h3>Work Quality</h3>
             </div>
 
             {

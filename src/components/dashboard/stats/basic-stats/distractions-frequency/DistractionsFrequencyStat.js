@@ -22,7 +22,7 @@ function DistractionsFrequencyStat(props) {
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
-                <h2>Distractions Frequency</h2>
+                <h3>Distractions Frequency</h3>
             </div>
 
             {

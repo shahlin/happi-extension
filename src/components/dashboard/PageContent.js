@@ -3,6 +3,7 @@ import OverallYearlyStatCalendar from "./stats/OverallYearlyStatCalendar";
 import BasicStats from "./stats/basic-stats/BasicStats";
 import { getOverallSatisfactionStats } from '../../api/stats/OverallSatisfactionStat';
 import { useEffect, useState } from "react";
+import InsightStats from "./stats/insights/InsightStats";
 
 function PageContent() {
 
@@ -21,6 +22,7 @@ function PageContent() {
         <div className="DashboardPageContent">
             <OverallWeeklyStat data={stats} />
             <OverallYearlyStatCalendar data={stats} />
+            <InsightStats />
             <BasicStats />
         </div>
     );

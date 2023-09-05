@@ -23,7 +23,7 @@ function BreaksFrequencyStat(props) {
     return (
         <BasicStatCard>
             <div className='DashboardStatHeader'>
-                <h2>Breaks Frequency</h2>
+                <h3>Breaks Frequency</h3>
             </div>
 
             {

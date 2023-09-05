@@ -27,6 +27,11 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
         const lastSyncedAtDate = new Date(value['last_synced_at']);
         const todaysDate = new Date();
 
+        if (todaysDate.getDay() === 0 || todaysDate.getDay() === 6) {
+            // If weekend, do not remind
+            return;
+        }
+
         if (
             lastSyncedAtDate.getFullYear() == todaysDate.getFullYear() &&
             lastSyncedAtDate.getMonth() == todaysDate.getMonth() &&

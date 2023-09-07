@@ -94,5 +94,61 @@
             "somewhat": 10,
             "no": 30
         }
+    },
+    "insights": {
+        "productive_time_of_day": {
+            "value": "AFTERNOON",
+            "description": "Most productive time of the day",
+            "data": {
+                "EVENING": 1,
+                "AFTERNOON": 7
+            }
+        },
+        "work_done_satisfaction": {
+            "value": "Unsatisfied",
+            "description": "You've been quite unsatisfied on the days you have got most of work done while foreseeing chances to improve the quality of your work",
+            "data": [
+                {
+                    "overall_productivity": "NEUTRAL",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "MOSTLY"
+                },
+                {
+                    "overall_productivity": "HAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT"
+                },
+                {
+                    "overall_productivity": "HAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT"
+                },
+                {
+                    "overall_productivity": "UNHAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT"
+                },
+                {
+                    "overall_productivity": "UNHAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT"
+                },
+                {
+                    "overall_productivity": "UNHAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT"
+                },
+                {
+                    "overall_productivity": "UNHAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT"
+                },
+                {
+                    "overall_productivity": "UNHAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT"
+                }
+            ]
+        }
     }
 }

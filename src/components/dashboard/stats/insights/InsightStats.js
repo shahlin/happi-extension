@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react';
+import { getInsightStats } from '../../../../api/stats/InsightStats';
 import './InsightStats.css'
 import ProductiveTimeStatDataCard from './productive-time/ProductiveTimeStatData';
 import ProductiveTimeStatOverviewCard from './productive-time/ProductiveTimeStatOverview';
 
-function InsightStats(props) {
+function InsightStats() {
+
+    const [stats, setStats] = useState({})
+
+    useEffect(() => {
+        async function getStats() {
+            let insightStats = await getInsightStats()
+            setStats(insightStats)
+        }
+
+        getStats()
+    }, [])
+
     return (
         <>
             <div className='DashboardStatHeader'>
@@ -10,8 +24,8 @@ function InsightStats(props) {
             </div>
 
             <div className="InsightStats">
-                <ProductiveTimeStatOverviewCard />
-                <ProductiveTimeStatDataCard />
+                <ProductiveTimeStatOverviewCard data={stats} />
+                <ProductiveTimeStatDataCard data={stats} />
             </div>
         </>
     );

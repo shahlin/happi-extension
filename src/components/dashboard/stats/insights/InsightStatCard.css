@@ -1,7 +1,36 @@
 .InsightStatCard {
-    height: 180px;
+    height: 250px;
     width: 330px;
     border-radius: 10px;
     box-shadow: 0 3px #F8F8F8;
     margin-bottom: 30px;
+    background: url(https://picsum.photos/id/1043/800/600);
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    padding: 10px 25px;
+    box-sizing: border-box;
+}
+
+.InsightStatCard .DashboardStatHeader {
+    height: 50px;
+}
+
+.InsightStatCard {
+    color: white;
+}
+
+.InsightStatCard .InsightCardHeading {
+    font-weight: normal;
+    font-size: 3em;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+.InsightStatCard .InsightCardHeading::first-letter {
+    text-transform: capitalize;
+}
+
+.InsightStatCard .InsightCardDescription {
+    font-size: 1.5em;
+    font-weight: 100;
 }

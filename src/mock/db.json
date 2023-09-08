@@ -108,7 +108,7 @@
         },
         "work_done_satisfaction": {
             "value": "Unsatisfied",
-            "description": "You've been quite unsatisfied on the days you have got most of work done while foreseeing chances to improve the quality of your work",
+            "description": "You've been quite unsatisfied on the days you have done considerable amount of work while foreseeing chances to improve the quality of your work",
             "data": [
                 {
                     "overall_satisfaction": "NEUTRAL",

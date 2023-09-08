@@ -113,42 +113,62 @@
                 {
                     "overall_productivity": "NEUTRAL",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "MOSTLY"
+                    "high_quality_work_done": "MOSTLY",
+                    "date": "2023-01-01"
                 },
                 {
                     "overall_productivity": "HAPPY",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "SOMEWHAT"
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-02"
                 },
                 {
                     "overall_productivity": "HAPPY",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "SOMEWHAT"
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-03"
                 },
                 {
                     "overall_productivity": "UNHAPPY",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "SOMEWHAT"
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-04"
                 },
                 {
                     "overall_productivity": "UNHAPPY",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "SOMEWHAT"
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-05"
                 },
                 {
                     "overall_productivity": "UNHAPPY",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "SOMEWHAT"
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-06"
                 },
                 {
                     "overall_productivity": "UNHAPPY",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "SOMEWHAT"
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-07"
                 },
                 {
                     "overall_productivity": "UNHAPPY",
                     "amount_of_work_done": "MOSTLY",
-                    "high_quality_work_done": "SOMEWHAT"
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-08"
+                },
+                {
+                    "overall_productivity": "HAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-09"
+                },
+                {
+                    "overall_productivity": "UNHAPPY",
+                    "amount_of_work_done": "MOSTLY",
+                    "high_quality_work_done": "SOMEWHAT",
+                    "date": "2023-01-10"
                 }
             ]
         }

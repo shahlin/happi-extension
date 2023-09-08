@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { Alert } from '@mui/material';
 import { getInsightStats } from '../../../../api/stats/InsightStats';
-import './InsightStats.css'
 import ProductiveTimeStatDataCard from './productive-time/ProductiveTimeStatData';
 import ProductiveTimeStatOverviewCard from './productive-time/ProductiveTimeStatOverview';
-import { Alert } from '@mui/material';
+import WorkDoneSatisfactionStatOverviewCard from './work-done-satisfaction/WorkDoneSatisfactionStatOverview';
+import WorkDoneSatisfactionStatDataCard from './work-done-satisfaction/WorkDoneSatisfactionStatData';
+import './InsightStats.css'
 
 function InsightStats() {
 
@@ -29,6 +31,9 @@ function InsightStats() {
                     <div className="InsightStats">
                         <ProductiveTimeStatOverviewCard data={stats} />
                         <ProductiveTimeStatDataCard data={stats} />
+
+                        <WorkDoneSatisfactionStatOverviewCard data={stats} />
+                        <WorkDoneSatisfactionStatDataCard data={stats} />
                     </div>
                 </>
             }

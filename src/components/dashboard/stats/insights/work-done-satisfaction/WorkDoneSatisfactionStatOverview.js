@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import InsightStatCard from "../InsightStatCard";
-import { getProductiveTimeStats } from "./Commons";
+import { getWorkDoneSatisfactionStats } from "./Commons";
 
-function ProductiveTimeStatOverviewCard(props) {
+function WorkDoneSatisfactionStatOverviewCard(props) {
 
     const [stats, setStats] = useState([]);
 
     useEffect(() => {
         const data = props.data;
-        const stats = getProductiveTimeStats(data)
+        const stats = getWorkDoneSatisfactionStats(data)
 
         setStats(stats)
     }, [props.data])
@@ -16,12 +16,12 @@ function ProductiveTimeStatOverviewCard(props) {
     return (
         <InsightStatCard
             style={{
-                backgroundImage: "url(" + getBackgroundImagePath() + ")",
                 borderBottomRightRadius: 0,
                 borderTopRightRadius: 0,
+                backgroundImage: "url(" + getBackgroundImagePath() + ")",
                 backgroundSize: 'cover',
             }}
-            className="ProductiveTimeInsightStatCard">
+            className="WorkDoneSatisfactionStatOverviewCard">
             <div className="DashboardStatHeader">
                 <h1 class="InsightCardHeading">{stats.value}</h1>
             </div>
@@ -30,8 +30,15 @@ function ProductiveTimeStatOverviewCard(props) {
     );
 
     function getBackgroundImagePath() {
-        return "insights/" + ((stats.value) ? stats.value.toLowerCase() : "default") + "-bg.jpg"
+        const prefix = "insights"
+        if (!stats.value) {
+            return prefix + '/default-bg.jpg'
+        }
+
+        if (stats.value == "Feeling great") return prefix + "/feeling-great-bg.jpg"
+        if (stats.value == "Can do better") return prefix + "/neutral-bg.jpg"
+        if (stats.value == "Unsatisfied") return prefix + "/unsatisfied-bg.jpg"
     }
 }
 
-export default ProductiveTimeStatOverviewCard;
+export default WorkDoneSatisfactionStatOverviewCard;

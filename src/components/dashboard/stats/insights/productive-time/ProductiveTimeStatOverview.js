@@ -14,13 +14,24 @@ function ProductiveTimeStatOverviewCard(props) {
     }, [props.data])
 
     return (
-        <InsightStatCard style={{ borderBottomRightRadius: 0, borderTopRightRadius: 0 }} className="ProductiveTimeInsightStatCard">
+        <InsightStatCard
+            style={{
+                backgroundImage: "url(" + getBackgroundImagePath() + ")",
+                borderBottomRightRadius: 0,
+                borderTopRightRadius: 0,
+                backgroundSize: 'cover',
+            }}
+            className="ProductiveTimeInsightStatCard">
             <div className="DashboardStatHeader">
                 <h1 class="InsightCardHeading">{stats.value}</h1>
             </div>
             <span class="InsightCardDescription">{stats.description}</span>
         </InsightStatCard>
     );
+
+    function getBackgroundImagePath() {
+        return "insights/" + ((stats.value) ? stats.value.toLowerCase() : "default-productive-time") + "-bg.jpg"
+    }
 }
 
 export default ProductiveTimeStatOverviewCard;

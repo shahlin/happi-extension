@@ -97,11 +97,13 @@
     },
     "insights": {
         "productive_time_of_day": {
-            "value": "AFTERNOON",
+            "value": "EVENING",
             "description": "Most productive time of the day",
             "data": {
-                "EVENING": 1,
-                "AFTERNOON": 7
+                "NONE": 3,
+                "EVENING": 14,
+                "AFTERNOON": 7,
+                "NIGHT": 1
             }
         },
         "work_done_satisfaction": {

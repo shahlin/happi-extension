@@ -31,7 +31,7 @@ function WorkDoneSatisfactionStatOverviewCard(props) {
 
     function getBackgroundImagePath() {
         const prefix = "insights"
-        if (!stats.value) {
+        if (!stats || !stats.value) {
             return prefix + '/default-bg.jpg'
         }
 

@@ -70,7 +70,7 @@ function WorkDoneSatisfactionStatDataCard(props) {
     function getFormattedData() {
         let rows = [];
 
-        if (stats.length === 0) {
+        if (stats && stats.length === 0) {
             return rows;
         }
 

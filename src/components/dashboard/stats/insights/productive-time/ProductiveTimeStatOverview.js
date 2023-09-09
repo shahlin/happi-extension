@@ -30,6 +30,10 @@ function ProductiveTimeStatOverviewCard(props) {
     );
 
     function getBackgroundImagePath() {
+        if (!stats || !stats.value) {
+            return "insights/default-bg.jpg"
+        }
+
         return "insights/" + ((stats.value) ? stats.value.toLowerCase() : "default") + "-bg.jpg"
     }
 }

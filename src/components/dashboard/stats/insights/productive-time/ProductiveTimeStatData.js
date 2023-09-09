@@ -97,7 +97,7 @@ function ProductiveTimeStatDataCard(props) {
             createData("EQUAL", 0),
         ]
 
-        if (Object.keys(stats).length === 0) {
+        if (stats && Object.keys(stats).length === 0) {
             return defaultRows;
         }
 

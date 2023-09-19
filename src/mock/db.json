@@ -19,42 +19,198 @@
     },
     "overall-satisfaction": {
         "weekly": {
-            "unhappy": 10,
-            "neutral": 50,
-            "happy": 40
+            "unhappy": 60,
+            "neutral": 30,
+            "happy": 10
         },
         "daily": [
             {
-                "date": "2023-01-01",
+                "date": "2023-08-16",
                 "value": "UNHAPPY"
             },
             {
-                "date": "2023-01-02",
+                "date": "2023-08-17",
                 "value": "HAPPY"
             },
             {
-                "date": "2023-01-03",
+                "date": "2023-08-18",
                 "value": "UNHAPPY"
             },
             {
-                "date": "2023-01-04",
+                "date": "2023-08-21",
                 "value": "UNHAPPY"
             },
             {
-                "date": "2023-01-05",
+                "date": "2023-08-22",
                 "value": "NEUTRAL"
             },
             {
-                "date": "2023-01-08",
+                "date": "2023-08-23",
                 "value": "NEUTRAL"
             },
             {
-                "date": "2023-01-09",
+                "date": "2023-08-24",
                 "value": "HAPPY"
             },
             {
-                "date": "2023-01-10",
+                "date": "2023-08-25",
                 "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-08-28",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-08-29",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-08-30",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-09-01",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-09-04",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-09-05",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-09-06",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-09-07",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-09-08",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-09-11",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-09-12",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-09-13",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-09-14",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-09-15",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-09-18",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-09-19",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-07-12",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-07-13",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-07-14",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-07-17",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-07-18",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-07-19",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-07-20",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-07-21",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-07-24",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-07-26",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-07-27",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-07-28",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-07-31",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-08-01",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-08-02",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-08-03",
+                "value": "UNHAPPY"
+            },
+            {
+                "date": "2023-08-04",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-08-07",
+                "value": "NEUTRAL"
+            },
+            {
+                "date": "2023-08-08",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-08-10",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-08-11",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-08-14",
+                "value": "HAPPY"
+            },
+            {
+                "date": "2023-08-15",
+                "value": "NEUTRAL"
             }
         ]
     },
@@ -101,8 +257,8 @@
             "description": "Most productive time of the day",
             "data": {
                 "NONE": 3,
-                "EVENING": 14,
-                "AFTERNOON": 7,
+                "EVENING": 7,
+                "AFTERNOON": 2,
                 "NIGHT": 1
             }
         },
@@ -123,7 +279,7 @@
                     "date": "2023-06-14"
                 },
                 {
-                    "overall_satisfaction": "HAPPY",
+                    "overall_satisfaction": "UNHAPPY",
                     "amount_of_work_done": "MOSTLY",
                     "high_quality_work_done": "SOMEWHAT",
                     "date": "2023-06-15"
@@ -147,7 +303,7 @@
                     "date": "2023-06-18"
                 },
                 {
-                    "overall_satisfaction": "UNHAPPY",
+                    "overall_satisfaction": "NEUTRAL",
                     "amount_of_work_done": "MOSTLY",
                     "high_quality_work_done": "NO",
                     "date": "2023-06-19"

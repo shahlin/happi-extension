@@ -5,6 +5,7 @@ import SleepQualityStat from './sleep-quality/SleepQualityStat';
 import WorkQualityStat from './work-quality/WorkQualityStat';
 import DistractionsFrequencyStat from './distractions-frequency/DistractionsFrequencyStat';
 import BreaksFrequencyStat from './breaks-frequency/BreaksFrequencyStat';
+import { MenuItem, Select } from '@mui/material';
 
 function BasicStats() {
 
@@ -23,6 +24,18 @@ function BasicStats() {
         <>
             <div className='DashboardStatHeader'>
                 <h2>Basics</h2>
+            </div>
+            <div className='BasicsTimePeriodFilter'>
+                <Select sx={{
+                    fontFamily: 'Dongle',
+                    fontSize: 18,
+                    height: 30,
+                    position: 'relative',
+                    top: -59,
+                    left: "83%"
+                }} value={1} className="BasicsTimePeriodFilterSelect">
+                    <MenuItem sx={{ fontFamily: 'Dongle', fontSize: 18, height: 30 }} value={1}>This Week</MenuItem>
+                </Select>
             </div>
 
             <div className="BasicStats">

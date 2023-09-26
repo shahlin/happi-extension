@@ -10,13 +10,13 @@ export async function registerUserIfNotExists() {
         return
     }
 
-    const newClientId = generateAndStoreClientId()
+    const newClientId = await generateAndStoreClientId()
     const clientEmail = await getAndStoreEmail()
 
     return registerUser(newClientId, clientEmail)
 }
 
-function generateAndStoreClientId() {
+async function generateAndStoreClientId() {
     const clientId = generateUniqueToken();
     storeKey(CLIENT_ID_STORAGE_KEY, clientId);
 

@@ -5,8 +5,8 @@ import SyncStatus from './SyncStatus';
 import SaveButton from './SaveButton';
 import StatusAlert from './StatusAlert';
 import { useState, useEffect } from "react";
-import { storeAuthKeys } from '../../utils/AuthUtils';
 import { clearStoredAnswersFromPreviousDay } from '../../utils/AnswerUtils';
+import { registerUserIfNotExists } from '../../api/auth/ClientRegistration';
 
 function Extension() {
     const [answers, setAnswers] = useState({});
@@ -14,7 +14,7 @@ function Extension() {
     const [successStatus, setSuccessStatus] = useState(false);
 
     useEffect(() => {
-        storeAuthKeys();
+        registerUserIfNotExists();
         clearStoredAnswersFromPreviousDay();
     }, []);
 
